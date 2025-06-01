@@ -48,11 +48,26 @@ Rebelde HMCS aims to provide a minimalist yet complete alternative to WHMCS-like
 - Make payments via configured gateways
 - Submit and view support tickets
 
+### 🌐 Public Frontend / Landing Website
+
+**Rebelde HMCS** includes an optional public-facing section that serves as an institutional website or landing page. This part of the system is designed to welcome visitors, present services, and facilitate initial contact with potential clients. It can be implemented as a simple landing page or as a more complete multipage website, depending on the provider’s needs.
+
+#### Key Features:
+- Customizable homepage
+- Sections for services, pricing plans, and key features
+- Contact forms and call-to-action elements
+- Modern design powered by Blade and Bootstrap (Tailwind CSS likely in the future)
+- Smooth, responsive navigation
+- Built-in support for basic SEO practices
+- Ready for extra content such as FAQs, testimonials, or articles
+
+This section is fully editable and can be integrated with dynamic components of the system or kept static, depending on the project's approach. Leveraging Laravel's Blade templating engine, developers can craft modular and maintainable layouts through partial views and intuitive component structures—without the complexity of advanced features like slots. The default design embraces a minimalist and modern aesthetic that aligns with the platform's visual identity, while remaining easy to extend or customize as needed. Static pages are served through clean, human-friendly routes and can be managed via dedicated controllers, ensuring both clarity in code structure and flexibility in content delivery.
+
 ---
 
 ## 🛠️ Tech Stack
 
-- Laravel 11
+- Laravel 12
 - Blade or Livewire (TBD)
 - MySQL / MariaDB (SQLite supported out of the box)
 - Bootstrap 5 (or TailwindCSS in future releases)
