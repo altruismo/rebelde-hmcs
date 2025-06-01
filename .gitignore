@@ -1,30 +1,78 @@
+# 🗃️ Directorio de issues de importación
+/issues/
+
+# ⚙️ Laravel
 /vendor/
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
-
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
-
-# Laravel 5 & Lumen specific with changed public path
-public_html/storage
-public_html/hot
-
-storage/*.key
 .env
+.env.*
+.env.*.backup
 Homestead.yaml
 Homestead.json
-/.vagrant
+*.key
+
+# Laravel logs y cachés
+/storage/*.key
+/storage/*.log
+/storage/app/public/*
+/storage/debugbar/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/bootstrap/cache/*
+
+# ⚙️ Composer
+composer.lock
+composer.phar
+
+# 🧪 PHPUnit y cobertura
+phpunit.xml
+phpunit.result.cache
+coverage/
 .phpunit.result.cache
 
-/public/build
-/storage/pail
-.env.backup
-.env.production
-.phpactor.json
-auth.json
+# ⚙️ Node & herramientas frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/public/hot
+/public/storage
+/public/mix-manifest.json
+/public/js/*.map
+/public/css/*.map
+/.vite
+/.vitepress
+/.nuxt
+/.output
+/.next
+/.cache
+
+# 🛠️ Editores de código
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# 🖥️ SO y archivos temporales
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.bak
+*.old
+
+# 💾 Entornos Python o pruebas (si aplicara)
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 📄 Documentación generada
+docs/_build/
+
+# 🔒 Archivos de seguridad o temporales de GitHub CLI
+*.token
+*.csv
