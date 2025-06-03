@@ -76,3 +76,4 @@ docs/_build/
 # 🔒 Archivos de seguridad o temporales de GitHub CLI
 *.token
 *.csv
+*.gittoken
