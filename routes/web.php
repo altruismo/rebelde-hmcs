@@ -16,4 +16,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// maneja la ruta para el cambio de lenguaje 
+Route::get('/lang/{locale}', function ($locale) {
+    if (!in_array($locale, ['en', 'es'])) {
+        abort(400);
+    }
+
+    session(['locale' => $locale]);
+
+    return redirect()->back();
+})->name('lang.switch');
+
+
 require __DIR__.'/auth.php';

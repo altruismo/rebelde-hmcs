@@ -10,8 +10,7 @@
                     <div class="bg-white p-4 rounded shadow">
                         <div class="px-6 flex items-center border-b font-bold text-lg text-teal-700">
                             {{ __('Your Info') }}
-                        </div>
-
+                        </div>                     
                         <h2 class="text-lg font-bold mb-2">{{ __('Your Company') }}<br>
                             {{ Auth::user()->name }}
                         </h2>

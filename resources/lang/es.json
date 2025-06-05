@@ -1,4 +1,10 @@
 {
     "Welcome Back": "Bienvenido de nuevo",
-    "Services": "Servicios"
+    "Home": "Home",
+    "Services": "Servicios",
+    "Domains": "Dominios",
+    "Billing": "Pagos",
+    "Support": "Soporte",    
+    "Open Ticket": "Abrir Ticket",
+    "Update": "Actualizar"
 }

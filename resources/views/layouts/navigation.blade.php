@@ -33,6 +33,13 @@
                 </div>
             </div>
 
+            <div class="px-4 py-2">
+                <span class="text-sm text-gray-600">Idioma:</span>
+                <a href="{{ route('lang.switch', 'es') }}" class="text-teal-600 hover:underline">ES</a> |
+                <a href="{{ route('lang.switch', 'en') }}" class="text-teal-600 hover:underline">EN</a>
+            </div>
+
+
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
