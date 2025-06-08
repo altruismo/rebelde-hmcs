@@ -3,7 +3,7 @@
     <div class="min-h-screen flex">
 
         {{-- Sidebar --}}
-        <aside class="w-64 bg-white border-r shadow-sm flex flex-col">
+        <aside class="hidden md:block w-64 bg-white border-r shadow-sm flex flex-col">
             <nav class="flex-1 px-4 py-6">
                 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
 
@@ -128,8 +128,57 @@
                     </div>                    
 
                 </div>
+                <br>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+                     <div class="bg-white p-4 rounded shadow">
+                        Buscador
+                     </div>
+                </div>
+                <br>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                     <div class="bg-white p-4 rounded shadow">
+                        <div class="bg-white p-4 rounded shadow"> Productos/Servicios Activos </div>
+                        <br>
+                        <div class="bg-white p-4 rounded shadow"> Registrar Nuevo Dominio </div>
+                     </div>
+                     <div class="bg-white p-4 rounded shadow">
+                        <div class="bg-white p-4 rounded shadow"> Tickets de Soporte Recientes </div>
+                        <br>
+                        <div class="bg-white p-4 rounded shadow"> Últimas Noticias </div>
+                     </div>
+                </div>
             </main>
         </div>
+
     </div>
+
+
+<footer class="dark:bg-orange-900 rounded-lg shadow-sm m-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="https://www.focused.cl/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="https://focused.cl/images/focused-logo-b.png" class="h-8" alt="Focused Logo" />
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0">
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-white sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-white sm:text-center">© 2023 <a href="https://focused.cl/" class="hover:underline">Focused</a>. All Rights Reserved.</span>
+    </div>
+</footer>
+
+
 
 </x-app-layout>
