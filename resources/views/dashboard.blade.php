@@ -3,11 +3,11 @@
     <div class="min-h-screen flex">
 
         {{-- Sidebar --}}
-        <aside class="hidden md:block w-64 bg-white border-r shadow-sm flex flex-col">
+        <aside class="hidden md:block w-64 bg-white dark:bg-zinc-900 border-r shadow-sm flex flex-col">
             <nav class="flex-1 px-4 py-6">
                 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
 
-                    <div class="bg-white p-4 rounded shadow">
+                    <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow" >
                         <div class="px-6 flex items-center border-b font-bold text-lg text-teal-700">
                             {{ __('dashboard.your_info') }}
                         </div>                     
@@ -24,7 +24,7 @@
                         <a href="/profile" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{{ __('dashboard.update') }}</a>
                     </div>
 
-                    <div class="bg-white p-4 rounded shadow">
+                    <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow">
                         <div class="px-6 flex items-center border-b font-bold text-lg text-teal-700">
                             {{ __('dashboard.contacts') }}
                         </div>
@@ -41,7 +41,7 @@
                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">{{ __('dashboard.new_contact') }}</a>
                     </div>
 
-                    <div class="bg-white p-4 rounded shadow">
+                    <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow">
                         <div class="px-6 flex items-center border-b font-bold text-lg text-teal-700">
                             {{ __('dashboard.shortcuts') }}
                         </div>
@@ -74,16 +74,16 @@
         {{-- Área principal --}}
         <div class="flex-1 flex flex-col">
             {{-- Encabezado --}}
-            <header class="bg-white shadow px-6 py-4">
+            <header class="bg-white dark:bg-dark dark:text-gray-200 shadow px-6 py-4">
                 <h1 class="text-2xl font-semibold text-gray-800">{{ __('dashboard.welcome') }} {{ Auth::user()->name }}</h1>
             </header>
 
             {{-- Contenido --}}
-            <main class="flex-1 p-6">
+            <main class="flex-1 p-6 dark:bg-black">
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     
-                    <div class="bg-white p-4 rounded shadow">
+                    <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow">
                         <h2 class="text-lg font-bold mb-2"> <a href="#">{{ __('dashboard.active_services') }} (6) </a></h2>
                         <p class="text-green-800">2 {{ __('dashboard.shared_services') }}</p>
                         <p class="text-green-600">1 {{ __('dashboard.vps_services') }}</p>
@@ -94,7 +94,7 @@
                         <a class="font-bold" href="#"> {{ __('dashboard.view_more') }}</a>
                     </div>
 
-                    <div class="bg-white p-4 rounded shadow">
+                    <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow">
                         <h2 class="text-lg font-bold mb-2"> <a href="#">{{ __('dashboard.domain_services') }} (10) </a></h2>
                         <p class="text-gray-400"> dominio1.cl {{ __('dashboard.domain_pending') }} - 06/05/2025</p>
                         <p class="text-green-600"> dominio2.cl {{ __('dashboard.domain_active') }} - 12/05/2030</p>
@@ -105,7 +105,7 @@
                         <a class="font-bold" href="#"> {{ __('dashboard.view_more') }}</a>  
                     </div>
 
-                    <div class="bg-white p-4 rounded shadow">
+                    <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow">
                         <h2 class="text-lg font-bold mb-2"> <a href="#">{{ __('dashboard.open_tickets') }} </a></h2>
                         <p class="text-green-800">000 {{ __('dashboard.opened_tickets') }}</p>                        
                         <p class="text-green-600">001 {{ __('dashboard.answered_tickets') }}</p>                        
@@ -116,7 +116,7 @@
                         <a class="font-bold" href="#"> {{ __('dashboard.view_more') }}</a>
                     </div>
 
-                    <div class="bg-white p-4 rounded shadow">
+                    <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow">
                         <h2 class="text-lg font-bold mb-2"> <a href="#">{{ __('dashboard.last_payments') }} </a></h2>
                         <p class="text-green-800">$19.990 {{ __('dashboard.last_payment_done') }} 01/06/2025 13:51:04</p>
                         <p class="text-green-600">$ 2.990 {{ __('dashboard.last_payment_done') }} 15/05/2025 21:30:15</p>
@@ -130,21 +130,21 @@
                 </div>
                 <br>
                 <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
-                     <div class="bg-white p-4 rounded shadow">
+                     <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow">
                         Buscador
                      </div>
                 </div>
                 <br>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                     <div class="bg-white p-4 rounded shadow">
-                        <div class="bg-white p-4 rounded shadow"> Productos/Servicios Activos </div>
+                     <div class="bg-white dark:bg-zinc-900 dark:text-gray-200 p-4 rounded shadow">
+                        <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow"> Productos/Servicios Activos </div>
                         <br>
-                        <div class="bg-white p-4 rounded shadow"> Registrar Nuevo Dominio </div>
+                        <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow"> Registrar Nuevo Dominio </div>
                      </div>
-                     <div class="bg-white p-4 rounded shadow">
-                        <div class="bg-white p-4 rounded shadow"> Tickets de Soporte Recientes </div>
+                     <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow">
+                        <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow"> Tickets de Soporte Recientes </div>
                         <br>
-                        <div class="bg-white p-4 rounded shadow"> Últimas Noticias </div>
+                        <div class="bg-white dark:bg-dark dark:text-gray-200 p-4 rounded shadow"> Últimas Noticias </div>
                      </div>
                 </div>
             </main>
@@ -153,7 +153,7 @@
     </div>
 
 
-<footer class="dark:bg-orange-900 rounded-lg shadow-sm m-4">
+<footer class="bg-white dark:bg-dark dark:text-gray-200 dark:bg-zinc-900 text-gray-900 dark:text-gray-100 rounded-lg shadow-sm m-4">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
             <a href="https://www.focused.cl/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
