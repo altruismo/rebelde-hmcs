@@ -1,11 +1,11 @@
-<nav x-data="{ open: false }" class="bg-white dark:bg-dark_light dark:text-white border-b border-dark">
+<nav x-data="{ open: false }" class="bg-heaven border-b border-clear text-dim dark:bg-dark-dim dark:border-dark-shade dark:text-heaven">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
+            
             <div class="flex">
-
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex ">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('navigation.home') }}
                     </x-nav-link>
@@ -15,10 +15,10 @@
                     <x-nav-link>
                         {{ __('navigation.domains') }}
                     </x-nav-link>
-                     <x-nav-link>
+                    <x-nav-link>
                         {{ __('navigation.billing') }}
                     </x-nav-link>
-                     <x-nav-link>
+                    <x-nav-link>
                         {{ __('navigation.support') }}
                     </x-nav-link>
                     <x-nav-link>
@@ -27,19 +27,19 @@
                 </div>
             </div>
 
-            <div class="px-4 py-2">
-                <span class="text-sm text-gray-600">{{ __('navigation.lang') }}:</span>
-                <a href="{{ route('lang.switch', 'es') }}" class="text-teal-600 hover:underline">ES</a> |
-                <a href="{{ route('lang.switch', 'en') }}" class="text-teal-600 hover:underline">EN</a>
+            <div class="sm:flex sm:items-center sm:ms-6">
+                <span class="text-sm dark:text-heaven">{{ __('navigation.lang') }}:</span>
+                <a href="{{ route('lang.switch', 'es') }}" class="dark:text-dark-heaven hover:underline">ES</a> |
+                <a href="{{ route('lang.switch', 'en') }}" class="dark:text-dark-heaven hover:underline">EN</a>
             </div>
 
-            <button id="toggleTheme">Cambiar tema</button>
+            <button id="toggleTheme" class="dark:text-heaven">Cambiar tema</button>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md dark:text-dark-heaven bg-shade dark:bg-dark-milk hover:text-white focus:outline-none transition ease-in-out duration-150">
                             <div>{{ Auth::user()->name }}</div>
 
                             <div class="ms-1">
@@ -60,7 +60,7 @@
                             @csrf
 
                             <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                                onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('navigation.logout') }}
                             </x-dropdown-link>
@@ -106,7 +106,7 @@
                     @csrf
 
                     <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
+                        onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('navigation.logout') }}
                     </x-responsive-nav-link>

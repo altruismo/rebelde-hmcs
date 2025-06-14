@@ -15,13 +15,63 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },            
             colors: {
-                // Tu paleta personalizada
-                primary: '#038b8c',
-                secondary: '#357146',
-                danger: '#9C2F2F',
-                dark: '#31210a',
-                dark_light: '#3c2a10',
-                dark_clear: '#3d2c12',
+                // light-theme
+                primary: '#0DF205',
+                secondary: '#4D3719',
+                danger: '#4D184D',
+                shade: '#DDF2BD',
+                dim: '#82BF26',
+                clear: '#DDF2BD',
+                milk: '#fbfff4',
+                heaven: '#FAFAFA',
+                
+                // hacker-theme
+                dark: {
+                    primary: '#F1F1F1',
+                    secondary: '#010101',
+                    danger: '#4D184D',
+                    shade: '#0D0D0D',
+                    dim: '#111C26',
+                    clear: '#384D59',
+                    milk: '#4D6873',
+                    heaven: '#C1D4D9',
+                },
+
+                //blue-theme
+                /* dark: {
+                    primary: '#038b8c',
+                    secondary: '#357146',
+                    danger: '#A60311',
+                    shade: '#00070D',
+                    dim: '#010D26',
+                    clear: '#011640',
+                    milk: '#0487D9',
+                    heaven: '#E5E7Eb',
+                }, */
+
+                //brown-theme
+                /* dark: {
+                    primary: '#038b8c',
+                    secondary: '#357146',
+                    danger: '#A60311',
+                    shade: '#0D0000',
+                    dim: '#260401',
+                    clear: '#400E03',
+                    milk: '#592B1B',
+                    heaven: '#73412F',
+                }, */
+
+                // green-theme
+                /* dark: {
+                    primary: '#038b8c',
+                    secondary: '#357146',
+                    danger: '#A60311',
+                    shade: '#040D09',
+                    dim: '#11261A',
+                    clear: '#1E402D',
+                    milk: '#9CA6A0',
+                    heaven: '#E5E7Eb',
+                }, */
             },
         },
     },
