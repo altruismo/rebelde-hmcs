@@ -16,7 +16,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                    <div class="bg-heaven text-dim dark:bg-dark-clear dark:text-gray-200 p-4 rounded shadow shadow-clear">
+                    <div class="card">
                         <h2 class="text-lg text-secondary font-bold mb-2"> <a class="underline" href="#">{{ __('dashboard.active_services') }} (6) </a></h2>
                         <p class="text-dim">2 {{ __('dashboard.shared_services') }}</p>
                         <p class="text-dim">1 {{ __('dashboard.vps_services') }}</p>
@@ -27,18 +27,16 @@
                         <a class="underline text-secondary dark:text-dark-heaven" href="#"> {{ __('dashboard.view_more') }}</a>
                     </div>
 
-                    <div class="bg-heaven text-dim dark:bg-dark-clear dark:text-gray-200 p-4 rounded shadow shadow-clear">
+                    <div class="card">
                         <h2 class="text-lg text-secondary font-bold mb-2"> <a class="underline" href="#">{{ __('dashboard.domain_services') }} (10) </a></h2>
                         <p class="text-dim"> dominio1.cl {{ __('dashboard.domain_pending') }} - 06/05/2025</p>
                         <p class="text-dim"> dominio2.cl {{ __('dashboard.domain_active') }} - 12/05/2030</p>
                         <p class="text-dim"> dominio3.com {{ __('dashboard.domain_suspended') }} - 26/04/2025</p>
                         <p class="text-dim"> dominio4.net {{ __('dashboard.domain_outdate') }} - 31/04/2025</p>
-                        <p class="text-dim"> dominio5.org {{ __('dashboard.domain_erased') }} - 26/08/2011</p>
-                        <p class="text-dim"> dominio6.org {{ __('dashboard.domain_erased') }} - 06/12/2010</p>
                         <a class="underline text-secondary dark:text-dark-heaven" href="#"> {{ __('dashboard.view_more') }}</a>
                     </div>
 
-                    <div class="bg-heaven text-dim dark:bg-dark-clear dark:text-gray-200 p-4 rounded shadow shadow-clear">
+                    <div class="card">
                         <h2 class="text-lg text-secondary font-bold mb-2"> <a class="underline" href="#">{{ __('dashboard.open_tickets') }} </a></h2>
                         <p class="text-green-800">000 {{ __('dashboard.opened_tickets') }}</p>
                         <p class="text-green-600">001 {{ __('dashboard.answered_tickets') }}</p>
@@ -49,14 +47,11 @@
                         <a class="underline text-secondary dark:text-dark-heaven" href="#"> {{ __('dashboard.view_more') }}</a>
                     </div>
 
-                    <div class="bg-heaven text-dim dark:bg-dark-clear dark:text-gray-200 p-4 rounded shadow shadow-clear">
+                    <div class="card">
                         <h2 class="text-lg text-secondary font-bold mb-2"> <a class="underline" href="#">{{ __('dashboard.last_payments') }} </a></h2>
-                        <p class="text-green-800">$19.990 {{ __('dashboard.last_payment_done') }} 01/06/2025 13:51:04</p>
-                        <p class="text-green-600">$ 2.990 {{ __('dashboard.last_payment_done') }} 15/05/2025 21:30:15</p>
-                        <p class="text-green-500">$17.900 {{ __('dashboard.last_payment_done') }} 07/04/2025 14:10:45</p>
-                        <p class="text-green-400">$19.990 {{ __('dashboard.last_payment_done') }} 01/04/2025 10:21:03</p>
-                        <p class="text-green-300">$ 2.990 {{ __('dashboard.last_payment_done') }} 12/03/2025 01:30:10</p>
-                        <p class="text-green-200">$ 7.990 {{ __('dashboard.last_payment_done') }} 10/03/2025 12:03:08</p>
+                        <p class="text-green-800">$19.990 - 01/06/2025 13:51:04</p>
+                        <p class="text-green-600">$ 2.990 - 15/05/2025 21:30:15</p>
+                        <p class="text-green-500">$17.900 - 07/04/2025 14:10:45</p>
                         <a class="underline text-secondary dark:text-dark-heaven" href="#"> {{ __('dashboard.view_more') }}</a>
                     </div>
 
@@ -77,21 +72,21 @@
                 </div>
                 <br>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                    <div class="bg-heaven dark:bg-dark-dim p-4 rounded shadow">
-                        <div class="bg-heaven text-dim dark:bg-dark-clear dark:text-gray-200 p-4 rounded shadow">
+                    <div class="bg-heaven dark:bg-dark-dim py-4">
+                        <div class="card">
                             <h2 class="text-lg font-bold mb-2"> Productos/Servicios Activos </h2>
                         </div>
                         <br>
-                        <div class="bg-heaven text-dim dark:bg-dark-clear dark:text-gray-200 p-4 rounded shadow">
+                        <div class="card">
                             <h2 class="text-lg font-bold mb-2"> Registrar Nuevo Dominio </h2>
                         </div>
                     </div>
-                    <div class="bg-heaven dark:bg-dark-dim p-4 rounded shadow">
-                        <div class="bg-heaven text-dim dark:bg-dark-clear dark:text-gray-200 p-4 rounded shadow">
+                    <div class="bg-heaven dark:bg-dark-dim py-4">
+                        <div class="card">
                             <h2 class="text-lg font-bold mb-2"> Tickets de Soporte Recientes </h2>
                         </div>
                         <br>
-                        <div class="bg-heaven text-dim dark:bg-dark-clear dark:text-gray-200 p-4 rounded shadow">
+                        <div class="card">
                             <h2 class="text-lg font-bold mb-2"> Últimas Noticias </h2>
                         </div>
                     </div>
