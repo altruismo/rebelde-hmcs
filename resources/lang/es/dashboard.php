@@ -15,7 +15,7 @@ return [
     'view_tickets' => 'Ver Tickets',
     'open_ticket' => 'Abrir Ticket',
     'logout' => 'Cerrar Sesión',
-    'active_services' => 'Servicios Activos',
+    'active_services' => 'Servicios',
     'vps_services' => 'Servicios VPS(full) Hosting',
     'vps_auto_services' => 'Servicios VPS(auto) Hosting',
     'vm_services' => 'Servicios VM Hosting',
