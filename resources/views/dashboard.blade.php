@@ -96,19 +96,45 @@
                         <a class="underline text-deep dark:text-dark-heaven" href="#"> {{ __('dashboard.view_more') }}</a>
                     </div>
 
-                </div>
+                </div>                    
                 <br>
-                <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
-                    <div class="relative w-full max-w focus-within:text-green-500">
-                        <div class="absolute inset-y-0 flex items-center pl-2 text-dim">
-                            <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                <div class="flex items-center w-full mx-auto">   
+                    <label for="voice-search" class="sr-only">{{ __('dashboard.search') }}</label>
+                    <div class="relative w-full">
+                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                            <svg class="opacity-50 text-dim" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.529 9.988a2.502 2.502 0 1 1 5 .191A2.441 2.441 0 0 1 12 12.582V14m-.01 3.008H12M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                             </svg>
                         </div>
-                        <input class="w-full h-19 pl-8 pr-2 text-lg text-secondary placeholder-dim bg-milk border-1 border-shade rounded-md
-                        dark:placeholder-orange-200 dark:focus:shadow-outline-green dark:focus:placeholder-green-400 dark:bg-dark_heaven dark:text-green-700 
-                        focus:placeholder-clear focus:bg-white focus:border-dim focus:outline-none focus:shadow-outline-red form-input"
-                            type="text" placeholder="Buscar en la base de conocimiento..." aria-label="Search">
+                        <input type="text" id="voice-search" class="bg-milk border border-dim text-secondary text-sm rounded-lg focus:ring-primary focus:border-clear block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="{{ __('dashboard.searchbar_placeholder') }}" required />
+                        <button type="button" class="absolute inset-y-0 end-0 flex items-center pe-3 hidden">
+                            <svg class="w-4 h-4 text-dim dark:text-gray-400 hover:text-primary dark:hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7v3a5.006 5.006 0 0 1-5 5H6a5.006 5.006 0 0 1-5-5V7m7 9v3m-3 0h6M7 1h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <button type="submit" class="inline-flex items-center py-2.5 px-3 ms-2 text-sm font-medium text-white bg-secondary rounded-lg border border-secondary hover:bg-deep focus:ring-1 focus:outline-none focus:ring-primary dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>{{ __('dashboard.search') }}
+                    </button>
+                </div>
+                <div class="flex ml-4 mt-2 mb-0">
+                    <div class="flex items-center me-4">
+                        <input checked id="inline-radio" type="radio" value="" name="inline-radio-group">
+                        <label for="inline-radio">Base de Conocimientos</label>
+                    </div>
+                    <div class="flex items-center me-4">
+                        <input id="inline-2-radio" type="radio" value="" name="inline-radio-group">
+                        <label for="inline-2-radio">Google</label>
+                    </div>
+                    <div class="flex items-center me-4">
+                        <input id="inline-3-radio" type="radio" value="" name="inline-radio-group">
+                        <label for="inline-3-radio">StackOverflow</label>
+                    </div>
+                    <div class="flex items-center opacity-30">
+                        <input disabled id="inline-4-radio" type="radio" value="" name="inline-radio-group">
+                        <label for="inline-4-radio">ChatGPT</label>
                     </div>
                 </div>
                 <br>
