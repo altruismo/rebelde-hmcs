@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .card {
+  /* .card {
     @apply bg-heaven text-dim dark:bg-dark-clear dark:text-gray-200 p-4 rounded shadow shadow-secondary;
   }  
   .card-aside {
@@ -28,7 +28,7 @@
     @apply w-6 h-6;
   }
 
-  /* Dashboard  */
+  
   .card a {
     @apply text-deep dark:text-dark-heaven flex items-center;
   }
@@ -45,10 +45,10 @@
     @apply text-deep;
   }
   input[type='radio'] {
-    @apply w-4 h-4 text-dim bg-milk focus:ring-primary dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-1 dark:bg-gray-700 dark:border-gray-600;
+    @apply w-4 h-4 text-dim bg-milk focus:ring-primo dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-1 dark:bg-gray-700 dark:border-gray-600;
   }
   input[type='radio'] + label {
     @apply ms-2 text-sm font-medium text-deep dark:text-gray-300;
-  }
+  } */
   
 }

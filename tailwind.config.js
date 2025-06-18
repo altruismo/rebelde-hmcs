@@ -11,12 +11,11 @@ export default {
     darkMode: 'class',
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },            
             colors: {
+                primary: { "50": "#f7fee7", "100": "#ecfccb", "200": "#d9f99d", "300": "#bef264", "400": "#a3e635", "500": "#84cc16", "600": "#65a30d", "700": "#4d7c0f", "800": "#3f6212", "900": "#365314", "950": "#1a2e05" },
+
                 // light-theme
-                primary: '#0DF205',
+                primo: '#0DF205',
                 secondary: '#4D3719',
                 danger: '#4D184D',
                 deep: '#395a0d',
@@ -25,7 +24,7 @@ export default {
                 clear: '#DDF2BD',
                 milk: '#fbfff4',
                 heaven: '#FAFAFA',
-                
+
                 // hacker-theme
                 dark: {
                     primary: '#F1F1F1',
@@ -39,43 +38,44 @@ export default {
                     heaven: '#C1D4D9',
                 },
 
-                //blue-theme
-                /* dark: {
-                    primary: '#038b8c',
-                    secondary: '#357146',
-                    danger: '#A60311',
-                    shade: '#00070D',
-                    dim: '#010D26',
-                    clear: '#011640',
-                    milk: '#0487D9',
-                    heaven: '#E5E7Eb',
-                }, */
-
-                //brown-theme
-                /* dark: {
-                    primary: '#038b8c',
-                    secondary: '#357146',
-                    danger: '#A60311',
-                    shade: '#0D0000',
-                    dim: '#260401',
-                    clear: '#400E03',
-                    milk: '#592B1B',
-                    heaven: '#73412F',
-                }, */
-
-                // green-theme
-                /* dark: {
-                    primary: '#038b8c',
-                    secondary: '#357146',
-                    danger: '#A60311',
-                    shade: '#040D09',
-                    dim: '#11261A',
-                    clear: '#1E402D',
-                    milk: '#9CA6A0',
-                    heaven: '#E5E7Eb',
-                }, */
-            },
+            }
         },
+        fontFamily: {
+            'body': [
+                'Montserrat',
+                'ui-sans-serif',
+                'system-ui',
+                '-apple-system',
+                'system-ui',
+                'Segoe UI',
+                'Roboto',
+                'Helvetica Neue',
+                'Arial',
+                'Noto Sans',
+                'sans-serif',
+                'Apple Color Emoji',
+                'Segoe UI Emoji',
+                'Segoe UI Symbol',
+                'Noto Color Emoji'
+            ],
+            'sans': [
+                'Montserrat',
+                'ui-sans-serif',
+                'system-ui',
+                '-apple-system',
+                'system-ui',
+                'Segoe UI',
+                'Roboto',
+                'Helvetica Neue',
+                'Arial',
+                'Noto Sans',
+                'sans-serif',
+                'Apple Color Emoji',
+                'Segoe UI Emoji',
+                'Segoe UI Symbol',
+                'Noto Color Emoji'
+            ]
+        }
     },
 
     plugins: [forms],
