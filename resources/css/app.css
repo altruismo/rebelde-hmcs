@@ -52,3 +52,21 @@
   } */
   
 }
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    @apply bg-milk dark:bg-dark-deep;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-clear border-2 border-solid rounded-full border-milk dark:bg-dark-brown dark:border-dark-deep;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-dim dark:bg-dark-dim;
+  }
+}

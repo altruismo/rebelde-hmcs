@@ -14,7 +14,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased bg-clear dark:bg-dark-shade">
+    <body class="font-sans antialiased bg-clear dark:bg-dark-dim scrollbar">
         <div class="min-h-screen">           
 
             <!-- Page Heading -->

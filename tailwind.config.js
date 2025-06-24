@@ -27,15 +27,9 @@ export default {
 
                 // hacker-theme
                 dark: {
-                    primary: '#F1F1F1',
-                    secondary: '#010101',
-                    danger: '#4D184D',
-                    deep: '#000000',
-                    shade: '#0D0D0D',
-                    dim: '#111C26',
-                    clear: '#384D59',
-                    milk: '#4D6873',
-                    heaven: '#C1D4D9',
+                    deep: '#281e0e',
+                    brown: '#4b381a',
+                    dim: '#C1B8A9',
                 },
 
             }

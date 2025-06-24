@@ -1,133 +1,484 @@
-<aside class="hidden lg:block w-64 text-heaven bg-dim dark:bg-dark-dim flex flex-col">
-    <nav class="flex-1 px-4 py-6">
-        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
-
-            <!-- Logo -->
-            <div class="shrink-0 flex items-center">
-                <a href="{{ route('dashboard') }}">
-                    <x-application-logo class="block h-9 w-auto fill-current" />
+<!-- Sidebar -->
+<aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-dim md:translate-x-0 dark:bg-dark-brown dark:border-dark-deep" aria-label="Sidenav" id="drawer-navigation">
+    <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-dark-brown">
+        <form action="#" method="GET" class="md:hidden mb-2">
+            <label for="sidebar-search" class="sr-only">Buscar</label>
+            <div class="relative">
+                <div
+                    class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <svg
+                        class="w-5 h-5 text-gray-500 dark:text-dark-dim"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path>
+                    </svg>
+                </div>
+                <input
+                    type="text"
+                    name="search"
+                    id="sidebar-search"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark-dim dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="Search" />
+            </div>
+        </form>
+        <ul class="space-y-2">
+            <li>
+                <a
+                    href="#"
+                    class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-dark-dim hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown group">
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                    </svg>
+                    <span class="ml-3">{{ __('navigation.home') }}</span>
                 </a>
-                <h2 class="pl-2 text-xl">Rebelde HMCS</h2>
-            </div>
-
-            <div class="card-aside">
-                <div class="title">
-                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4Zm10 5a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1Zm0 3a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1Zm0 3a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1Zm-8-5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm1.942 4a3 3 0 0 0-2.847 2.051l-.044.133-.004.012c-.042.126-.055.167-.042.195.006.013.02.023.038.039.032.025.08.064.146.155A1 1 0 0 0 6 17h6a1 1 0 0 0 .811-.415.713.713 0 0 1 .146-.155c.019-.016.031-.026.038-.04.014-.027 0-.068-.042-.194l-.004-.012-.044-.133A3 3 0 0 0 10.059 14H7.942Z" clip-rule="evenodd"/>
+            </li>
+            <li>
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-pages"
+                    data-collapse-toggle="dropdown-pages">
+                    <svg
+                        aria-hidden="true"
+                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                            clip-rule="evenodd"></path>
                     </svg>
-                    {{ __('dashboard.your_info') }}
-                </div>
-                <div class="pl-2">
-                    <h2 class="text-lg font-bold mb-2">{{ __('dashboard.company_placeholder') }}<br>
-                        {{ Auth::user()->name }}
-                    </h2>
-                    <p class="text-shade">La Quebrada 9651<br>
-                        105b<br>
-                        LAS CONDES<br>
-                        metropolitana<br>
-                        760038<br>
-                        Chile<br>
-                    </p>
-                    <ul>
-                        <li>
-                            <a href="/profile">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                    <path fill-rule="evenodd" d="M5 8a4 4 0 1 1 7.796 1.263l-2.533 2.534A4 4 0 0 1 5 8Zm4.06 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h2.172a2.999 2.999 0 0 1-.114-1.588l.674-3.372a3 3 0 0 1 .82-1.533L9.06 13Zm9.032-5a2.907 2.907 0 0 0-2.056.852L9.967 14.92a1 1 0 0 0-.273.51l-.675 3.373a1 1 0 0 0 1.177 1.177l3.372-.675a1 1 0 0 0 .511-.273l6.07-6.07a2.91 2.91 0 0 0-.944-4.742A2.907 2.907 0 0 0 18.092 8Z" clip-rule="evenodd"/>
-                                </svg>
-                                {{ __('dashboard.update') }}
-                            </a>
-                        </li>
-                    </ul>                    
-                </div>
-            </div>
-
-            <div class="card-aside">
-                <div class="title">
-                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M12 6a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm-1.5 8a4 4 0 0 0-4 4 2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-3Zm6.82-3.096a5.51 5.51 0 0 0-2.797-6.293 3.5 3.5 0 1 1 2.796 6.292ZM19.5 18h.5a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-1.1a5.503 5.503 0 0 1-.471.762A5.998 5.998 0 0 1 19.5 18ZM4 7.5a3.5 3.5 0 0 1 5.477-2.889 5.5 5.5 0 0 0-2.796 6.293A3.501 3.501 0 0 1 4 7.5ZM7.1 12H6a4 4 0 0 0-4 4 2 2 0 0 0 2 2h.5a5.998 5.998 0 0 1 3.071-5.238A5.505 5.505 0 0 1 7.1 12Z" clip-rule="evenodd"/>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">{{ __('navigation.services') }}</span>
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
                     </svg>
-                    {{ __('dashboard.contacts') }}
-                </div>
-                <div class="pl-2">
-                    <ul>
-                        <li class="text-clear">
-                            <svg class="w-4 h-4 text-shade dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-                            </svg>
-                            {{ __('dashboard.no_contacts_found') }}
-                        </li>                    
-                        <li>                            
-                            <a href="#">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                    <path fill-rule="evenodd" d="M9 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4H7Zm8-1a1 1 0 0 1 1-1h1v-1a1 1 0 1 1 2 0v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
-                                </svg>
-                                {{ __('dashboard.new_contact') }}
-                            </a>
-                        </li>
-                    </ul>                    
-                </div>                
-            </div>
-
-            <div class="card-aside">
-                <div class="title">
-                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M7.833 2c-.507 0-.98.216-1.318.576A1.92 1.92 0 0 0 6 3.89V21a1 1 0 0 0 1.625.78L12 18.28l4.375 3.5A1 1 0 0 0 18 21V3.889c0-.481-.178-.954-.515-1.313A1.808 1.808 0 0 0 16.167 2H7.833Z"/>
+                </button>
+                <ul id="dropdown-pages" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Settings</a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Kanban</a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Calendar</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-sales"
+                    data-collapse-toggle="dropdown-sales">
+                    <svg
+                        aria-hidden="true"
+                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                            clip-rule="evenodd"></path>
                     </svg>
-                    {{ __('dashboard.shortcuts') }}
-                </div>
-                <div class="pl-2">
-                    <ul>
-                        <li>                            
-                            <a href="#">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
-                                </svg>
-                                {{ __('dashboard.order_new_service') }}
-                            </a>
-                        </li>
-                        <li>                            
-                            <a href="#">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4"/>
-                                </svg>
-                                {{ __('dashboard.register_a_domain') }}                                
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m8-2h3m-3 3h3m-4 3v6m4-3H8M19 4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1ZM8 12v6h8v-6H8Z"/>
-                                </svg>
-                                {{ __('dashboard.view_invoices') }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.5 12A2.5 2.5 0 0 1 21 9.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2.5a2.5 2.5 0 0 1 0 5V17a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-2.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
-                                </svg>
-                                {{ __('dashboard.view_tickets') }}</a>
-                        </li>
-                        <li>                            
-                            <a href="#">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.529 9.988a2.502 2.502 0 1 1 5 .191A2.441 2.441 0 0 1 12 12.582V14m-.01 3.008H12M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-                                </svg>
-                                {{ __('dashboard.open_ticket') }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
-                                </svg>
-                                {{ __('dashboard.logout') }}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Sales</span>
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="dropdown-sales" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Products</a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Billing</a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Invoice</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a
+                    href="#"
+                    class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-dark-dim hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown group">
+                    <svg
+                        aria-hidden="true"
+                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path>
+                        <path
+                            d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path>
+                    </svg>
+                    <span class="flex-1 ml-3 whitespace-nowrap">Messages</span>
+                    <span
+                        class="inline-flex justify-center items-center w-5 h-5 text-xs font-semibold rounded-full text-primary-800 bg-primary-100 dark:bg-dark-dim dark:text-dark-brown dark:group-hover:bg-dark-brown dark:group-hover:text-dark-dim">
+                        4
+                    </span>
+                </a>
+            </li>
+            <li>
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-authentication"
+                    data-collapse-toggle="dropdown-authentication">
+                    <svg
+                        aria-hidden="true"
+                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Authentication</span>
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="dropdown-authentication" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Sign In</a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Sign Up</a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Forgot Password</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul
+            class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
+            <li>
+                <a
+                    href="#"
+                    class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown dark:text-dark-dim group">
+                    <svg
+                        aria-hidden="true"
+                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                        <path
+                            fill-rule="evenodd"
+                            d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="ml-3">Docs</span>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="#"
+                    class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown dark:text-dark-dim group">
+                    <svg
+                        aria-hidden="true"
+                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
+                    </svg>
+                    <span class="ml-3">Components</span>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="#"
+                    class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown dark:text-dark-dim group">
+                    <svg
+                        aria-hidden="true"
+                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.976 5.976 0 01-2.516-.552l1.562-1.562a4.006 4.006 0 001.789.027zm-4.677-2.796a4.002 4.002 0 01-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 004 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0110 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 00-2.346.033L7.246 4.668zM12 10a2 2 0 11-4 0 2 2 0 014 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="ml-3">Help</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div
+        class="hidden absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-dark-brown z-20">
+        <a
+            href="#"
+            class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-dark-dim hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-600">
+            <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path>
+            </svg>
+        </a>
+        <a
+            href="#"
+            data-tooltip-target="tooltip-settings"
+            class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-dark-dim dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
+            <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    fill-rule="evenodd"
+                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </a>
+        <div
+            id="tooltip-settings"
+            role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip">
+            Settings page
+            <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
-    </nav>
+        <button
+            type="button"
+            data-dropdown-toggle="language-dropdown"
+            class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:hover:text-white dark:text-dark-dim hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
+            <svg
+                aria-hidden="true"
+                class="h-5 w-5 rounded-full mt-0.5"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 3900 3900">
+                <path fill="#b22234" d="M0 0h7410v3900H0z" />
+                <path
+                    d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0"
+                    stroke="#fff"
+                    stroke-width="300" />
+                <path fill="#3c3b6e" d="M0 0h2964v2100H0z" />
+                <g fill="#fff">
+                    <g id="d">
+                        <g id="c">
+                            <g id="e">
+                                <g id="b">
+                                    <path
+                                        id="a"
+                                        d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z" />
+                                    <use xlink:href="#a" y="420" />
+                                    <use xlink:href="#a" y="840" />
+                                    <use xlink:href="#a" y="1260" />
+                                </g>
+                                <use xlink:href="#a" y="1680" />
+                            </g>
+                            <use xlink:href="#b" x="247" y="210" />
+                        </g>
+                        <use xlink:href="#c" x="494" />
+                    </g>
+                    <use xlink:href="#d" x="988" />
+                    <use xlink:href="#c" x="1976" />
+                    <use xlink:href="#e" x="2470" />
+                </g>
+            </svg>
+        </button>
+        <!-- Dropdown -->
+        <div
+            class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+            id="language-dropdown">
+            <ul class="py-1" role="none">
+                <li>
+                    <a
+                        href="#"
+                        class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600"
+                        role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg
+                                aria-hidden="true"
+                                class="h-3.5 w-3.5 rounded-full mr-2"
+                                xmlns="http://www.w3.org/2000/svg"
+                                id="flag-icon-css-us"
+                                viewBox="0 0 512 512">
+                                <g fill-rule="evenodd">
+                                    <g stroke-width="1pt">
+                                        <path
+                                            fill="#bd3d44"
+                                            d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                                            transform="scale(3.9385)" />
+                                        <path
+                                            fill="#fff"
+                                            d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
+                                            transform="scale(3.9385)" />
+                                    </g>
+                                    <path
+                                        fill="#192f5d"
+                                        d="M0 0h98.8v70H0z"
+                                        transform="scale(3.9385)" />
+                                    <path
+                                        fill="#fff"
+                                        d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z"
+                                        transform="scale(3.9385)" />
+                                </g>
+                            </svg>
+                            English (US)
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-600"
+                        role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg
+                                aria-hidden="true"
+                                class="h-3.5 w-3.5 rounded-full mr-2"
+                                xmlns="http://www.w3.org/2000/svg"
+                                id="flag-icon-css-de"
+                                viewBox="0 0 512 512">
+                                <path fill="#ffce00" d="M0 341.3h512V512H0z" />
+                                <path d="M0 0h512v170.7H0z" />
+                                <path fill="#d00" d="M0 170.7h512v170.6H0z" />
+                            </svg>
+                            Deutsch
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-600"
+                        role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg
+                                aria-hidden="true"
+                                class="h-3.5 w-3.5 rounded-full mr-2"
+                                xmlns="http://www.w3.org/2000/svg"
+                                id="flag-icon-css-it"
+                                viewBox="0 0 512 512">
+                                <g fill-rule="evenodd" stroke-width="1pt">
+                                    <path fill="#fff" d="M0 0h512v512H0z" />
+                                    <path fill="#009246" d="M0 0h170.7v512H0z" />
+                                    <path fill="#ce2b37" d="M341.3 0H512v512H341.3z" />
+                                </g>
+                            </svg>
+                            Italiano
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="#"
+                        class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600"
+                        role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg
+                                aria-hidden="true"
+                                class="h-3.5 w-3.5 rounded-full mr-2"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                id="flag-icon-css-cn"
+                                viewBox="0 0 512 512">
+                                <defs>
+                                    <path
+                                        id="a"
+                                        fill="#ffde00"
+                                        d="M1-.3L-.7.8 0-1 .6.8-1-.3z" />
+                                </defs>
+                                <path fill="#de2910" d="M0 0h512v512H0z" />
+                                <use
+                                    width="30"
+                                    height="20"
+                                    transform="matrix(76.8 0 0 76.8 128 128)"
+                                    xlink:href="#a" />
+                                <use
+                                    width="30"
+                                    height="20"
+                                    transform="rotate(-121 142.6 -47) scale(25.5827)"
+                                    xlink:href="#a" />
+                                <use
+                                    width="30"
+                                    height="20"
+                                    transform="rotate(-98.1 198 -82) scale(25.6)"
+                                    xlink:href="#a" />
+                                <use
+                                    width="30"
+                                    height="20"
+                                    transform="rotate(-74 272.4 -114) scale(25.6137)"
+                                    xlink:href="#a" />
+                                <use
+                                    width="30"
+                                    height="20"
+                                    transform="matrix(16 -19.968 19.968 16 256 230.4)"
+                                    xlink:href="#a" />
+                            </svg>
+                            中文 (繁體)
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </aside>
