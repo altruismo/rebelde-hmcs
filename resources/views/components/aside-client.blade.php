@@ -1,6 +1,6 @@
 <!-- Sidebar -->
 <aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-dim md:translate-x-0 dark:bg-dark-brown dark:border-dark-deep" aria-label="Sidenav" id="drawer-navigation">
-    <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-dark-brown">
+    <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-dark-brown scrollbar">
         <form action="#" method="GET" class="md:hidden mb-2">
             <label for="sidebar-search" class="sr-only">Buscar</label>
             <div class="relative">
@@ -29,15 +29,9 @@
             <li>
                 <a
                     href="#"
-                    class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-dark-dim hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown group">
-                    <svg
-                        aria-hidden="true"
-                        class="w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                    class="flex items-center p-2 lg:text-base text-sm font-medium text-gray-900 rounded-lg dark:text-dark-dim hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown group">
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd" />
                     </svg>
                     <span class="ml-3">{{ __('navigation.home') }}</span>
                 </a>
@@ -45,19 +39,11 @@
             <li>
                 <button
                     type="button"
-                    class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
                     aria-controls="dropdown-pages"
                     data-collapse-toggle="dropdown-pages">
-                    <svg
-                        aria-hidden="true"
-                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            fill-rule="evenodd"
-                            d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
-                            clip-rule="evenodd"></path>
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M5 5a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2H5Zm9 2a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H14Zm3 0a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H17ZM3 17v-3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm11-2a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H14Zm3 0a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H17Z" clip-rule="evenodd" />
                     </svg>
                     <span class="flex-1 ml-3 text-left whitespace-nowrap">{{ __('navigation.services') }}</span>
                     <svg
@@ -76,38 +62,30 @@
                     <li>
                         <a
                             href="#"
-                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Settings</a>
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.my_services') }} </a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Kanban</a>
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.order_new_services') }} </a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Calendar</a>
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.view_available_addons') }} </a>
                     </li>
                 </ul>
             </li>
             <li>
                 <button
                     type="button"
-                    class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
-                    aria-controls="dropdown-sales"
-                    data-collapse-toggle="dropdown-sales">
-                    <svg
-                        aria-hidden="true"
-                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            fill-rule="evenodd"
-                            d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-                            clip-rule="evenodd"></path>
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-domains"
+                    data-collapse-toggle="dropdown-domains">
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M8.64 4.737A7.97 7.97 0 0 1 12 4a7.997 7.997 0 0 1 6.933 4.006h-.738c-.65 0-1.177.25-1.177.9 0 .33 0 2.04-2.026 2.008-1.972 0-1.972-1.732-1.972-2.008 0-1.429-.787-1.65-1.752-1.923-.374-.105-.774-.218-1.166-.411-1.004-.497-1.347-1.183-1.461-1.835ZM6 4a10.06 10.06 0 0 0-2.812 3.27A9.956 9.956 0 0 0 2 12c0 5.289 4.106 9.619 9.304 9.976l.054.004a10.12 10.12 0 0 0 1.155.007h.002a10.024 10.024 0 0 0 1.5-.19 9.925 9.925 0 0 0 2.259-.754 10.041 10.041 0 0 0 4.987-5.263A9.917 9.917 0 0 0 22 12a10.025 10.025 0 0 0-.315-2.5A10.001 10.001 0 0 0 12 2a9.964 9.964 0 0 0-6 2Zm13.372 11.113a2.575 2.575 0 0 0-.75-.112h-.217A3.405 3.405 0 0 0 15 18.405v1.014a8.027 8.027 0 0 0 4.372-4.307ZM12.114 20H12A8 8 0 0 1 5.1 7.95c.95.541 1.421 1.537 1.835 2.415.209.441.403.853.637 1.162.54.712 1.063 1.019 1.591 1.328.52.305 1.047.613 1.6 1.316 1.44 1.825 1.419 4.366 1.35 5.828Z" clip-rule="evenodd" />
                     </svg>
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Sales</span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap"> {{ __('navigation.domains') }} </span>
                     <svg
                         aria-hidden="true"
                         class="w-6 h-6"
@@ -120,64 +98,39 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <ul id="dropdown-sales" class="hidden py-2 space-y-2">
+                <ul id="dropdown-domains" class="hidden py-2 space-y-2">
                     <li>
                         <a
                             href="#"
-                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Products</a>
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.my_domains') }} </a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Billing</a>
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.renew_domains') }} </a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Invoice</a>
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.register_new_domain') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.search_domain') }} </a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a
-                    href="#"
-                    class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-dark-dim hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown group">
-                    <svg
-                        aria-hidden="true"
-                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path>
-                        <path
-                            d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path>
-                    </svg>
-                    <span class="flex-1 ml-3 whitespace-nowrap">Messages</span>
-                    <span
-                        class="inline-flex justify-center items-center w-5 h-5 text-xs font-semibold rounded-full text-primary-800 bg-primary-100 dark:bg-dark-dim dark:text-dark-brown dark:group-hover:bg-dark-brown dark:group-hover:text-dark-dim">
-                        4
-                    </span>
-                </a>
-            </li>
-            <li>
                 <button
                     type="button"
-                    class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
-                    aria-controls="dropdown-authentication"
-                    data-collapse-toggle="dropdown-authentication">
-                    <svg
-                        aria-hidden="true"
-                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            fill-rule="evenodd"
-                            d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                            clip-rule="evenodd"></path>
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-billing"
+                    data-collapse-toggle="dropdown-billing">
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2" />
                     </svg>
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Authentication</span>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap"> {{ __('navigation.billing') }} </span>
                     <svg
                         aria-hidden="true"
                         class="w-6 h-6"
@@ -190,66 +143,78 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <ul id="dropdown-authentication" class="hidden py-2 space-y-2">
+                <ul id="dropdown-billing" class="hidden py-2 space-y-2">
                     <li>
                         <a
                             href="#"
-                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Sign In</a>
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.my_invoices') }} </a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Sign Up</a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown">Forgot Password</a>
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.my_quotes') }} </a>
                     </li>
                 </ul>
             </li>
         </ul>
-        <ul
-            class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
+        <ul class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-dark-dim">
             <li>
-                <a
-                    href="#"
-                    class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown dark:text-dark-dim group">
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-support"
+                    data-collapse-toggle="dropdown-support">
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2a7 7 0 0 0-7 7 3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1a1 1 0 0 0 1-1V9a5 5 0 1 1 10 0v7.083A2.919 2.919 0 0 1 14.083 19H14a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a2 2 0 0 0 1.732-1h.351a4.917 4.917 0 0 0 4.83-4H19a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3 7 7 0 0 0-7-7Zm1.45 3.275a4 4 0 0 0-4.352.976 1 1 0 0 0 1.452 1.376 2.001 2.001 0 0 1 2.836-.067 1 1 0 1 0 1.386-1.442 4 4 0 0 0-1.321-.843Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap"> {{ __('navigation.support') }} </span>
                     <svg
                         aria-hidden="true"
-                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown"
+                        class="w-6 h-6"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
                         <path
                             fill-rule="evenodd"
-                            d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                             clip-rule="evenodd"></path>
                     </svg>
-                    <span class="ml-3">Docs</span>
-                </a>
+                </button>
+                <ul id="dropdown-support" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.tickets') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.open_ticket') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.announcements') }} </a>
+                    </li>                    
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.downloads') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.network_status') }} </a>
+                    </li>
+                </ul>
             </li>
+
             <li>
-                <a
-                    href="#"
-                    class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown dark:text-dark-dim group">
-                    <svg
-                        aria-hidden="true"
-                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
-                    </svg>
-                    <span class="ml-3">Components</span>
-                </a>
-            </li>
-            <li>
-                <a
-                    href="#"
-                    class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown dark:text-dark-dim group">
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-help"
+                    data-collapse-toggle="dropdown-help">
                     <svg
                         aria-hidden="true"
                         class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown"
@@ -261,9 +226,94 @@
                             d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.976 5.976 0 01-2.516-.552l1.562-1.562a4.006 4.006 0 001.789.027zm-4.677-2.796a4.002 4.002 0 01-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 004 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0110 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 00-2.346.033L7.246 4.668zM12 10a2 2 0 11-4 0 2 2 0 014 0z"
                             clip-rule="evenodd"></path>
                     </svg>
-                    <span class="ml-3">Help</span>
-                </a>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap"> {{ __('navigation.help') }} </span>
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="dropdown-help" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.knowledgebase') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.blog') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.tutorials') }} </a>
+                    </li>                    
+                </ul>
             </li>
+
+            <li>
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-docs"
+                    data-collapse-toggle="dropdown-docs">                   
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M11 4.717c-2.286-.58-4.16-.756-7.045-.71A1.99 1.99 0 0 0 2 6v11c0 1.133.934 2.022 2.044 2.007 2.759-.038 4.5.16 6.956.791V4.717Zm2 15.081c2.456-.631 4.198-.829 6.956-.791A2.013 2.013 0 0 0 22 16.999V6a1.99 1.99 0 0 0-1.955-1.993c-2.885-.046-4.76.13-7.045.71v15.081Z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap"> {{ __('navigation.docs') }} </span>
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="dropdown-docs" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_cpanel') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_whm') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_wordpress') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_php') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_mysql') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_letsencrypt') }} </a>
+                    </li>
+                </ul>
+            </li>
+            
         </ul>
     </div>
     <div
@@ -346,7 +396,7 @@
         </button>
         <!-- Dropdown -->
         <div
-            class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+            class="hidden z-50 my-4 lg:text-base text-sm list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
             id="language-dropdown">
             <ul class="py-1" role="none">
                 <li>

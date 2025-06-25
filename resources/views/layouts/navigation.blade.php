@@ -1,4 +1,4 @@
-<nav class="bg-heaven border-b border-dim text-secondary px-4 fixed left-0 right-0 top-0 z-50 dark:bg-dark-brown dark:border-dark-deep dark:text-dark-dim">
+<nav class="bg-heaven border-b border-dim text-secondary px-4 py-2 fixed left-0 right-0 top-0 z-50 dark:bg-dark-brown dark:border-dark-brown dark:text-dark-dim">
 
     <div class="flex flex-wrap justify-between items-center">
         <div class="flex justify-start items-center">
