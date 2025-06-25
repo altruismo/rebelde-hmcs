@@ -1,30 +1,24 @@
 <!-- Sidebar -->
 <aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-dim md:translate-x-0 dark:bg-dark-brown dark:border-dark-deep" aria-label="Sidenav" id="drawer-navigation">
     <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-dark-brown scrollbar">
-        <form action="#" method="GET" class="md:hidden mb-2">
-            <label for="sidebar-search" class="sr-only">Buscar</label>
-            <div class="relative">
-                <div
-                    class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                    <svg
-                        class="w-5 h-5 text-gray-500 dark:text-dark-dim"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path>
-                    </svg>
-                </div>
-                <input
-                    type="text"
-                    name="search"
-                    id="sidebar-search"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-dark-dim dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                    placeholder="Search" />
-            </div>
-        </form>
+
+        <div class="max-w-sm p-6 mb-4 bg-milk rounded-lg shadow-sm dark:bg-dark-brown dark:shadow-dark-deep">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-dark-dim"> {{ Auth::user()->name }} </h5>
+            <h6 class="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-dark-clear"> Tecnywebsupport SpA </h6>
+            <p class="mb-3 font-normal text-gray-700 dark:text-dark-dim">
+                Estoril 120 oficina 608
+                Santiago
+                Metropolitana
+                7591047
+                Chile
+            </p>
+            <a href="/profile" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-heaven bg-dim rounded-lg focus:ring-2 focus:outline-none focus:ring-primo dark:bg-dark-dim dark:text-dark-brown dark:hover:bg-dark-clear dark:focus:ring-dark-dim">
+                {{ __('navigation.update') }}
+                <svg class="w-5 h-5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M5 8a4 4 0 1 1 7.796 1.263l-2.533 2.534A4 4 0 0 1 5 8Zm4.06 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h2.172a2.999 2.999 0 0 1-.114-1.588l.674-3.372a3 3 0 0 1 .82-1.533L9.06 13Zm9.032-5a2.907 2.907 0 0 0-2.056.852L9.967 14.92a1 1 0 0 0-.273.51l-.675 3.373a1 1 0 0 0 1.177 1.177l3.372-.675a1 1 0 0 0 .511-.273l6.07-6.07a2.91 2.91 0 0 0-.944-4.742A2.907 2.907 0 0 0 18.092 8Z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
         <ul class="space-y-2">
             <li>
                 <a
@@ -157,7 +151,32 @@
                 </ul>
             </li>
         </ul>
+        
         <ul class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-dark-dim">
+            <form action="#" method="GET" class="xs:hidden mb-2">
+            <label for="sidebar-search" class="sr-only"> {{ __('navigation.search') }} </label>
+            <div class="relative">
+                <div
+                    class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <svg
+                        class="w-5 h-5 text-gray-500 dark:text-dark-brown"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path>
+                    </svg>
+                </div>
+                <input
+                    type="text"
+                    name="search"
+                    id="sidebar-search"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-dark-dim dark:border-dark-deep dark:placeholder-dark-brown dark:text-dark-deep dark:focus:ring-dark-clear"
+                    placeholder="{{ __('navigation.search') }}" />
+            </div>
+        </form>
             <li>
                 <button
                     type="button"
@@ -195,7 +214,7 @@
                         <a
                             href="#"
                             class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.announcements') }} </a>
-                    </li>                    
+                    </li>
                     <li>
                         <a
                             href="#"
@@ -254,7 +273,7 @@
                         <a
                             href="#"
                             class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.tutorials') }} </a>
-                    </li>                    
+                    </li>
                 </ul>
             </li>
 
@@ -263,9 +282,9 @@
                     type="button"
                     class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
                     aria-controls="dropdown-docs"
-                    data-collapse-toggle="dropdown-docs">                   
+                    data-collapse-toggle="dropdown-docs">
                     <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M11 4.717c-2.286-.58-4.16-.756-7.045-.71A1.99 1.99 0 0 0 2 6v11c0 1.133.934 2.022 2.044 2.007 2.759-.038 4.5.16 6.956.791V4.717Zm2 15.081c2.456-.631 4.198-.829 6.956-.791A2.013 2.013 0 0 0 22 16.999V6a1.99 1.99 0 0 0-1.955-1.993c-2.885-.046-4.76.13-7.045.71v15.081Z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd" d="M11 4.717c-2.286-.58-4.16-.756-7.045-.71A1.99 1.99 0 0 0 2 6v11c0 1.133.934 2.022 2.044 2.007 2.759-.038 4.5.16 6.956.791V4.717Zm2 15.081c2.456-.631 4.198-.829 6.956-.791A2.013 2.013 0 0 0 22 16.999V6a1.99 1.99 0 0 0-1.955-1.993c-2.885-.046-4.76.13-7.045.71v15.081Z" clip-rule="evenodd" />
                     </svg>
                     <span class="flex-1 ml-3 text-left whitespace-nowrap"> {{ __('navigation.docs') }} </span>
                     <svg
@@ -313,7 +332,7 @@
                     </li>
                 </ul>
             </li>
-            
+
         </ul>
     </div>
     <div

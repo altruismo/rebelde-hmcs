@@ -30,6 +30,7 @@ export default {
                     deep: '#281e0e',
                     brown: '#4b381a',
                     dim: '#C1B8A9',
+                    clear: '#c19749',
                 },
 
             }

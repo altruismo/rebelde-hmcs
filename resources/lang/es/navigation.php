@@ -23,6 +23,7 @@ return [
     "open_ticket" => "Abrir Ticket",
     "help" => "Ayuda",
     "blog" => "Blog",
+    "search" => "Buscar",
     "tutorials" => "Tutoriales",
     "docs" => "Documentación",
     "docs_cpanel" => "cPanel®",
