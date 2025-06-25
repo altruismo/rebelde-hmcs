@@ -33,7 +33,7 @@
             </button>
             <a href="https://flowbite.com" class="flex items-center justify-between mr-4">
                 <img
-                    src="https://flowbite.s3.amazonaws.com/logo.svg"
+                    src="focused_hosting_main_logo_white_transparent_100x109.svg"
                     class="mr-3 h-8 mix-blend-luminosity"
                     alt="Flowbite Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark-dim">Rebelde HMCS</span>
