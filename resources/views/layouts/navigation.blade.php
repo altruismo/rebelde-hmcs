@@ -42,35 +42,6 @@
 
         </div>
         <div class="flex items-center lg:order-2">
-            <!-- Toggle Search -->
-            <!-- <button
-                type="button"
-                data-drawer-toggle="drawer-navigation"
-                aria-controls="drawer-navigation"
-                class="p-2 mr-1 text-gray-500 rounded-lg md:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
-                <span class="sr-only">Toggle search</span>
-                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path clip-rule="evenodd" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path>
-                </svg>
-            </button> -->
-
-            <!-- Toggle Lang -->
-             <div title="Cambiar el lenguaje" class="mr-4 sm:flex sm:items-center sm:ms-6">
-                <!-- <span class="text-sm dark:text-heaven">{{ __('navigation.lang') }}:</span> -->
-                <a href="{{ route('lang.switch', 'es') }}" class="dark:text-dark-heaven hover:underline hover:text-dim">ES</a> |
-                <a href="{{ route('lang.switch', 'en') }}" class="dark:text-dark-heaven hover:underline hover:text-dim">EN</a>
-            </div>
-
-            <!-- Toggle Theme -->
-            <button title="Alternar Colores" id="toggleTheme" class="sm:flex sm:items-center sm:ms-6 contents hover:text-dim">
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z" />
-                </svg> |
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5V3m0 18v-2M7.05 7.05 5.636 5.636m12.728 12.728L16.95 16.95M5 12H3m18 0h-2M7.05 16.95l-1.414 1.414M18.364 5.636 16.95 7.05M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" />
-                </svg>
-            </button>
-
             <!-- Notifications -->
             <button
                 type="button"

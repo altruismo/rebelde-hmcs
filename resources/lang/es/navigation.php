@@ -39,4 +39,8 @@ return [
     "dashboard" => "Volver al Home",
     "lang_english" => "Inglés",
     "lang_spanish" => "Español",
+    "tooltip-lang" => "cambiar el idioma",
+    "tooltip-theme-selector" => "alternar colores",
+    "new-contact" => "Nuevo Contacto/Sub-cuenta",
+    "view-contacts" => "Ver Contactos/Sub-cuentas",
 ];

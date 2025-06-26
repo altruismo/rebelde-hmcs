@@ -37,6 +37,11 @@ return [
     "profile" => "Profile",
     "logout" => "Log Out",
     "dashboard" => "Back to Home",
-    "lang_english" => "English",
-    "lang_spanish" => "Spanish",
+    "lang-english" => "English",
+    "lang-spanish" => "Spanish",
+    "tooltip-lang" => "select language",
+    "tooltip-theme-selector" => "change colors",
+    "tooltip-add-contacts" => "contacts and sub-accounts",
+    "new-contact" => "New Contact/Sub-account",
+    "view-contacts" => "View Contacts/Sub-accounts",
 ];
