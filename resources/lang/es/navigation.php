@@ -36,5 +36,7 @@ return [
     "lang" => "Idioma",
     "profile" => "Perfil",
     "logout" => "Cerrar Sesión",
-    "dashboard" => "Volver al Home"
+    "dashboard" => "Volver al Home",
+    "lang_english" => "Inglés",
+    "lang_spanish" => "Español",
 ];

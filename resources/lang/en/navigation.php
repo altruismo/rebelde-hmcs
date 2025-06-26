@@ -36,5 +36,7 @@ return [
     "lang" => "Lang",
     "profile" => "Profile",
     "logout" => "Log Out",
-    "dashboard" => "Back to Home"
+    "dashboard" => "Back to Home",
+    "lang_english" => "English",
+    "lang_spanish" => "Spanish",
 ];
