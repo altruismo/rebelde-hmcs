@@ -27,6 +27,7 @@ export default {
 
                 // hacker-theme
                 dark: {
+                    action: '#ff9c00',
                     deep: '#281e0e',
                     brown: '#4b381a',
                     dim: '#C1B8A9',
