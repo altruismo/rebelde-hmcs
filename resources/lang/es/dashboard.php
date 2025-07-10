@@ -36,5 +36,6 @@ return [
     'waiting_tickets' => 'Esperando al Cliente',
     'hold_tickets' => 'Retenidos',
     'closed_tickets' => 'Cerrados',
-    'view_more' => 'Ver más...'
+    'view_more' => 'Ver más...',
+    'view_all' => 'Ver todo',
 ];
