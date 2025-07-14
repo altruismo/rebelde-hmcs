@@ -12,42 +12,42 @@
                 <li>
                     <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-dark-brown/15 dark:hover:bg-dark-brown/50 dark:text-white">
                         <x-flowbite-icons.life-saver-outline /><span class="hidden lg:inline">Support Lv1 -</span>
-                        <span class="flex-1 ms-3 whitespace-nowrap text-base overflow-auto scrollbar">#YQC-81-47573 - pagina web con error 503</span>
+                        <span class="flex-1 ms-3 whitespace-nowrap text-xs 2xl:text-base overflow-auto scrollbar">#YQC-81-47573 - pagina web con error 503</span>
                         <span class="w-24 inline-flex items-center justify-center px-2 py-0.5 sm:p-2 ms-3 text-xs font-medium text-secondary bg-green-100 rounded-sm">open</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-dark-brown/15 dark:hover:bg-dark-brown/50 dark:text-white">
                         <x-flowbite-icons.headset-outline /><span class="hidden lg:inline">Support Lv2 -</span>
-                        <span class="flex-1 ms-3 whitespace-nowrap text-base overflow-auto scrollbar">#RKA-45-56874 - restaurar sitio Web</span>
+                        <span class="flex-1 ms-3 whitespace-nowrap text-xs 2xl:text-base overflow-auto scrollbar">#RKA-45-56874 - restaurar sitio Web</span>
                         <span class="w-24 inline-flex items-center justify-center px-2 py-0.5 sm:p-2 ms-3 text-xs font-medium text-secondary bg-green-200 rounded-sm">in progress</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-dark-brown/15 dark:hover:bg-dark-brown/50 dark:text-white">
                         <x-flowbite-icons.credit-card-outline /><span class="hidden lg:inline">Billing -</span>
-                        <span class="flex-1 ms-3 whitespace-nowrap text-base overflow-auto scrollbar">#TRG-84-32189 - servicio pagado</span>
+                        <span class="flex-1 ms-3 whitespace-nowrap text-xs 2xl:text-base overflow-auto scrollbar">#TRG-84-32189 - servicio pagado</span>
                         <span class="w-24 inline-flex items-center justify-center px-2 py-0.5 sm:p-2 ms-3 text-xs font-medium text-heaven bg-green-500 rounded-sm">answered</span>
                     </a>
                 </li>
                 <li>
                      <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-dark-brown/15 dark:hover:bg-dark-brown/50 dark:text-white">
                         <x-flowbite-icons.cart-outline /><span class="hidden lg:inline">Ventas -</span>
-                        <span class="flex-1 ms-3 whitespace-nowrap text-base overflow-auto scrollbar">#FGH-56-23197 - Nuevo VPS</span>
+                        <span class="flex-1 ms-3 whitespace-nowrap text-xs 2xl:text-base overflow-auto scrollbar">#FGH-56-23197 - Nuevo VPS</span>
                         <span class="w-24 inline-flex items-center justify-center px-2 py-0.5 sm:p-2 ms-3 text-xs font-medium text-heaven bg-yellow-900 rounded-sm">on hold</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-dark-brown/15 dark:hover:bg-dark-brown/50 dark:text-white">
                         <x-flowbite-icons.truck-outline /><span class="hidden lg:inline">Migraciones -</span>
-                        <span class="flex-1 ms-3 whitespace-nowrap text-base overflow-auto scrollbar">#MYE-42-67351 - WordPress www.latiendadepelife.com</span>
+                        <span class="flex-1 ms-3 whitespace-nowrap text-xs 2xl:text-base overflow-auto scrollbar">#MYE-42-67351 - WordPress www.latiendadepelife.com</span>
                         <span class="w-24 inline-flex items-center justify-center px-2 py-0.5 sm:p-2 ms-3 text-xs font-medium text-heaven bg-green-900 rounded-sm">Closed</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-dark-brown/15 dark:hover:bg-dark-brown/50 dark:text-white">
                         <x-flowbite-icons.bug-outline /><span class="hidden lg:inline">Desinfecciones -</span>
-                        <span class="flex-1 ms-3 whitespace-nowrap text-base overflow-auto scrollbar">#MYE-42-67351 - WordPress www.latiendadepelife.com</span>
+                        <span class="flex-1 ms-3 whitespace-nowrap text-xs 2xl:text-base overflow-auto scrollbar">#MYE-42-67351 - WordPress www.latiendadepelife.com</span>
                         <span class="w-24 inline-flex items-center justify-center px-2 py-0.5 sm:p-2 ms-3 text-xs font-medium text-heaven bg-green-900 rounded-sm">Closed</span>
                     </a>
                 </li>

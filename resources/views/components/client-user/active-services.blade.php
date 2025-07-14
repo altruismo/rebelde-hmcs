@@ -14,7 +14,7 @@
                     <svg class="w-6 h-6 p-1 rounded-full text-heaven bg-gradient-to-tr to-dim from-green-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1M5 12h14M5 12a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1m-2 3h.01M14 15h.01M17 9h.01M14 9h.01"/>
                     </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap text-base overflow-auto">Web Hosting Básico - condorito.cl</span>
+                    <span class="flex-1 ms-3 whitespace-nowrap text-xs 2xl:text-base overflow-auto">Web Hosting Básico - condorito.cl</span>
                     <span class="w-24 inline-flex items-center justify-center px-2 py-0.5 sm:p-2 ms-3 text-xs font-medium text-haven bg-green-800 rounded-sm">active</span>
                 </a>
             </li>
@@ -23,7 +23,7 @@
                     <svg class="w-6 h-6 p-1 rounded-full text-heaven bg-gradient-to-tr to-dim from-green-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1M5 12h14M5 12a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1m-2 3h.01M14 15h.01M17 9h.01M14 9h.01"/>
                     </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap text-base overflow-auto">Web Hosting Inicia - sale.com </span>
+                    <span class="flex-1 ms-3 whitespace-nowrap text-xs 2xl:text-base overflow-auto">Web Hosting Inicia - sale.com </span>
                     <span class="w-24 inline-flex items-center justify-center px-2 py-0.5 sm:p-2 ms-3 text-xs font-medium text-heaven bg-yellow-700 rounded-sm">suspended</span>
                 </a>
             </li>
@@ -32,7 +32,7 @@
                     <svg class="w-6 h-6 p-1 rounded-full text-heaven bg-gradient-to-tr to-orange-500 from-orange-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1M5 12h14M5 12a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1m-2 3h.01M14 15h.01M17 9h.01M14 9h.01"/>
                     </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap text-base overflow-auto">VPS Hosting(Full) - vps.focused.cl</span>
+                    <span class="flex-1 ms-3 whitespace-nowrap text-xs 2xl:text-base overflow-auto">VPS Hosting(Full) - vps.focused.cl</span>
                     <span class="w-24 inline-flex items-center justify-center px-2 py-0.5 sm:p-2 ms-3 text-xs font-medium text-gray-500 bg-gray-200 rounded-sm dark:bg-dark-heaven dark:text-secondary">active</span>
                 </a>
             </li>
@@ -41,7 +41,7 @@
                     <svg class="w-6 h-6 p-1 rounded-full text-heaven bg-gradient-to-tr to-blue-400 from-blue-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1M5 12h14M5 12a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1m-2 3h.01M14 15h.01M17 9h.01M14 9h.01"/>
                     </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap text-base overflow-auto">VM Droplet - vm.comercialx.cl</span>
+                    <span class="flex-1 ms-3 whitespace-nowrap text-xs 2xl:text-base overflow-auto">VM Droplet - vm.comercialx.cl</span>
                     <span class="w-24 inline-flex items-center justify-center px-2 py-0.5 sm:p-2 ms-3 text-xs font-medium text-gray-500 bg-gray-200 rounded-sm dark:bg-dark-heaven dark:text-secondary">active</span>   
                 </a>
             </li>
@@ -50,7 +50,7 @@
                     <svg class="w-6 h-6 p-1 rounded-full text-heaven bg-gradient-to-tr to-purple-500 from-purple-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1M5 12h14M5 12a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1m-2 3h.01M14 15h.01M17 9h.01M14 9h.01"/>
                     </svg>
-                    <span class="flex-1 ms-3 whitespace-nowrap text-base overflow-auto">Sitio Web(DC) - www.loremipsum.cl</span>
+                    <span class="flex-1 ms-3 whitespace-nowrap text-xs 2xl:text-base overflow-auto">Sitio Web(DC) - www.loremipsum.cl</span>
                     <span class="w-24 inline-flex items-center justify-center px-2 py-0.5 sm:p-2 ms-3 text-xs font-medium text-gray-500 bg-gray-200 rounded-sm dark:bg-dark-heaven dark:text-secondary">active</span>
                 </a>
             </li>
