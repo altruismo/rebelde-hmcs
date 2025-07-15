@@ -18,9 +18,10 @@
     <x-client-user.new-order />
     <x-client-user.new-domain-order />
     <x-client-user.announcements />
+    <x-client-user.notify-payment />
     <!-- <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-dark-brown h-48 md:h-72"></div> -->
     <!-- <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-dark-brown h-48 md:h-72"></div> -->
     <!-- <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-dark-brown h-48 md:h-72"></div> -->
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-dark-brown h-48 md:h-72"></div>
+    <!-- <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-dark-brown h-48 md:h-72"></div> -->
   </div>
 </main>
