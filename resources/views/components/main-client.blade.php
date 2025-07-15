@@ -17,9 +17,10 @@
   <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-4">
     <x-client-user.new-order />
     <x-client-user.new-domain-order />
+    <x-client-user.announcements />
     <!-- <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-dark-brown h-48 md:h-72"></div> -->
     <!-- <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-dark-brown h-48 md:h-72"></div> -->
-    <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-dark-brown h-48 md:h-72"></div>
+    <!-- <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-dark-brown h-48 md:h-72"></div> -->
     <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-dark-brown h-48 md:h-72"></div>
   </div>
 </main>
