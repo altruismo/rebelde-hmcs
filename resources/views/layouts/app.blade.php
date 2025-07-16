@@ -46,6 +46,55 @@
         const isDark = html.classList.toggle('dark')
         localStorage.setItem('theme', isDark ? 'dark' : 'light')
     })
+
+    // Cargar categorías desde los datos
+        const loadCategories = (data) => {
+            const categorySelect = document.getElementById('select-category');
+            categorySelect.innerHTML = '<option class="dark:text-secondary/50" value="" selected>Selecciona un Servicio</option>';
+            
+            data.categories.forEach(category => {
+                const option = new Option(category.name, category.id);
+                categorySelect.add(option);
+            });
+        };
+
+        // Cargar servicios según categoría seleccionada
+        const loadServices = (categoryId, data) => {
+            const serviceSelect = document.getElementById('select-servicios');
+            serviceSelect.innerHTML = '<option class="dark:text-secondary/50" value="" selected>Elige un Plan</option>';
+            serviceSelect.disabled = !categoryId;
+            
+            if (!categoryId) return;
+
+            const selectedCategory = data.categories.find(cat => cat.id === categoryId);
+            if (selectedCategory) {
+                selectedCategory.services.forEach(service => {
+                    serviceSelect.add(new Option(`${service.name} - from ${service.price}`, service.id));
+                });
+            }
+        };
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('http://clientes.focused.cl.local/build/list-services.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Error al cargar los datos');
+                    return response.json();
+                })
+                .then(data => {
+                    loadCategories(data);
+                    console.log(data);
+                    document.getElementById('select-category').addEventListener('change', (e) => {
+                        loadServices(e.target.value, data);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('select-category').innerHTML = 
+                        '<option value="" selected>Error al cargar categorías</option>';
+                });
+        });
+
 </script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
