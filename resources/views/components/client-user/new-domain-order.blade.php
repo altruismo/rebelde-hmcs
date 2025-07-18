@@ -1,11 +1,13 @@
-<div class="h-40 rounded-lg shadow-md">
+<div class="h-40 mb-8 rounded-lg shadow-md">
     <h5 class="flex justify-between p-2 px-4 rounded-t-lg text-base font-semibold text-gray-900 md:text-xl dark:text-white bg-clear dark:bg-dark-brown">
         New Domain Order
     </h5>
     <div class="p-4 pt-1 dark:bg-dark-deep">
-        <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Request a new domain registration</p>
+        <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Find a new awesome domain name for you new website</p>
         <form class="mt-4">
-            <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-secondary">Search</label>
+            <label for="domain-name-base" class="block mb-2 text-sm font-medium text-secondary dark:text-white">
+                Request a new Domain Name:
+            </label>
             <div class="relative">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                     <svg class="w-4 h-4 text-gray-500 dark:text-secondary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">

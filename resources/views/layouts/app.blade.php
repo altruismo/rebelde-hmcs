@@ -15,7 +15,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased bg-clear dark:bg-dark-dim scrollbar">
+<body class="font-sans antialiased bg-clear dark:bg-dark-deep scrollbar">
     <div class="min-h-screen">
 
         <!-- Page Heading -->
