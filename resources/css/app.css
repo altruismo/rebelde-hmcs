@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* .card {
+    @apply bg-heaven text-dim dark:bg-dark-clear dark:text-gray-200 p-4 rounded shadow shadow-secondary;
+  }  
+  .card-aside {
+    @apply text-heaven dark:bg-dark-clear dark:text-gray-200 p-4 pl-1;
+  }
+  .card-aside > .title {
+    @apply flex items-center border-b border-shade font-bold text-2xl mb-1 text-clear;
+  }
+  .card-aside a {
+     @apply font-medium text-deep dark:text-blue-500 hover:underline hover:text-clear contents;
+  }
+  .card-aside ul {
+    @apply max-w-md space-y-1 list-inside text-heaven;
+  }
+  .card-aside li {
+    @apply flex items-center py-1;
+  }
+  .card-aside svg {
+    @apply w-5 h-5 mr-1 dark:text-white;
+  }
+  .card-aside > .title > svg {
+    @apply w-6 h-6;
+  }
+
+  
+  .card a {
+    @apply text-deep dark:text-dark-heaven flex items-center;
+  }
+  .card h2 > a {
+    @apply text-secondary;
+  }
+  .card h2 > a > svg {
+    @apply w-7 h-7;
+  }
+  .card > a > svg {
+    @apply w-5 h-5;
+  }
+  .deck-2 .card h2 > a {
+    @apply text-deep;
+  }
+  input[type='radio'] {
+    @apply w-4 h-4 text-dim bg-milk focus:ring-primo dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-1 dark:bg-gray-700 dark:border-gray-600;
+  }
+  input[type='radio'] + label {
+    @apply ms-2 text-sm font-medium text-deep dark:text-gray-300;
+  } */
+  
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    @apply bg-milk dark:bg-dark-deep;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-clear border-2 border-solid rounded-full border-milk dark:bg-dark-brown dark:border-dark-deep;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-dim dark:bg-dark-dim;
+  }
+}

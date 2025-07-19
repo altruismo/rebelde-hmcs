@@ -1,0 +1,463 @@
+<!-- Sidebar -->
+<aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-dim md:translate-x-0 dark:bg-dark-brown dark:border-dark-brown" aria-label="Sidenav" id="drawer-navigation">
+    <div class="overflow-y-auto py-5 pb-14 px-3 h-full bg-white dark:bg-dark-brown scrollbar">
+
+        <div class="max-w-sm p-6 mb-4 bg-milk rounded-lg shadow-sm dark:bg-dark-brown dark:shadow-dark-deep">
+            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-dark-dim"> {{ Auth::user()->name }} </h5>
+            <h6 class="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-dark-clear"> Tecnywebsupport SpA </h6>
+            <p class="mb-3 text-sm font-normal text-gray-700 dark:text-dark-dim">
+                Estoril 120 oficina 608
+                Santiago
+                Metropolitana
+                7591047
+                Chile
+            </p>
+            <a href="/profile" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-heaven bg-dim rounded-lg focus:ring-2 focus:outline-none focus:ring-primo dark:bg-dark-dim dark:text-dark-brown dark:hover:bg-dark-clear dark:focus:ring-dark-dim">
+                {{ __('navigation.update') }}
+                <svg class="w-5 h-5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M5 8a4 4 0 1 1 7.796 1.263l-2.533 2.534A4 4 0 0 1 5 8Zm4.06 5H7a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h2.172a2.999 2.999 0 0 1-.114-1.588l.674-3.372a3 3 0 0 1 .82-1.533L9.06 13Zm9.032-5a2.907 2.907 0 0 0-2.056.852L9.967 14.92a1 1 0 0 0-.273.51l-.675 3.373a1 1 0 0 0 1.177 1.177l3.372-.675a1 1 0 0 0 .511-.273l6.07-6.07a2.91 2.91 0 0 0-.944-4.742A2.907 2.907 0 0 0 18.092 8Z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+        <ul class="space-y-2">
+            <li>
+                <a
+                    href="#"
+                    class="flex items-center p-2 lg:text-base text-sm font-medium text-gray-900 rounded-lg dark:text-dark-dim hover:bg-gray-100 dark:hover:bg-dark-dim dark:hover:text-dark-brown group">
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="ml-3">{{ __('navigation.home') }}</span>
+                </a>
+            </li>
+            <li>
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-pages"
+                    data-collapse-toggle="dropdown-pages">
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M5 5a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2H5Zm9 2a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H14Zm3 0a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H17ZM3 17v-3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm11-2a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H14Zm3 0a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H17Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap">{{ __('navigation.services') }}</span>
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="dropdown-pages" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.my_services') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.order_new_services') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.view_available_addons') }} </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-domains"
+                    data-collapse-toggle="dropdown-domains">
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M8.64 4.737A7.97 7.97 0 0 1 12 4a7.997 7.997 0 0 1 6.933 4.006h-.738c-.65 0-1.177.25-1.177.9 0 .33 0 2.04-2.026 2.008-1.972 0-1.972-1.732-1.972-2.008 0-1.429-.787-1.65-1.752-1.923-.374-.105-.774-.218-1.166-.411-1.004-.497-1.347-1.183-1.461-1.835ZM6 4a10.06 10.06 0 0 0-2.812 3.27A9.956 9.956 0 0 0 2 12c0 5.289 4.106 9.619 9.304 9.976l.054.004a10.12 10.12 0 0 0 1.155.007h.002a10.024 10.024 0 0 0 1.5-.19 9.925 9.925 0 0 0 2.259-.754 10.041 10.041 0 0 0 4.987-5.263A9.917 9.917 0 0 0 22 12a10.025 10.025 0 0 0-.315-2.5A10.001 10.001 0 0 0 12 2a9.964 9.964 0 0 0-6 2Zm13.372 11.113a2.575 2.575 0 0 0-.75-.112h-.217A3.405 3.405 0 0 0 15 18.405v1.014a8.027 8.027 0 0 0 4.372-4.307ZM12.114 20H12A8 8 0 0 1 5.1 7.95c.95.541 1.421 1.537 1.835 2.415.209.441.403.853.637 1.162.54.712 1.063 1.019 1.591 1.328.52.305 1.047.613 1.6 1.316 1.44 1.825 1.419 4.366 1.35 5.828Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap"> {{ __('navigation.domains') }} </span>
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="dropdown-domains" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.my_domains') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.renew_domains') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.register_new_domain') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.search_domain') }} </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-billing"
+                    data-collapse-toggle="dropdown-billing">
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2" />
+                    </svg>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap"> {{ __('navigation.billing') }} </span>
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="dropdown-billing" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.my_invoices') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.my_quotes') }} </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-dark-dim">
+            <form action="#" method="GET" class="xs:hidden mb-2">
+                <label for="sidebar-search" class="sr-only"> {{ __('navigation.search') }} </label>
+                <div class="relative">
+                    <div
+                        class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                        <svg
+                            class="w-5 h-5 text-gray-500 dark:text-dark-brown"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path>
+                        </svg>
+                    </div>
+                    <input
+                        type="text"
+                        name="search"
+                        id="sidebar-search"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-dark-dim dark:border-dark-deep dark:placeholder-dark-brown dark:text-dark-deep dark:focus:ring-dark-clear"
+                        placeholder="{{ __('navigation.search') }}" />
+                </div>
+            </form>
+            <li>
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-support"
+                    data-collapse-toggle="dropdown-support">
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-dark-dim dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2a7 7 0 0 0-7 7 3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1a1 1 0 0 0 1-1V9a5 5 0 1 1 10 0v7.083A2.919 2.919 0 0 1 14.083 19H14a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a2 2 0 0 0 1.732-1h.351a4.917 4.917 0 0 0 4.83-4H19a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3 7 7 0 0 0-7-7Zm1.45 3.275a4 4 0 0 0-4.352.976 1 1 0 0 0 1.452 1.376 2.001 2.001 0 0 1 2.836-.067 1 1 0 1 0 1.386-1.442 4 4 0 0 0-1.321-.843Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap"> {{ __('navigation.support') }} </span>
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="dropdown-support" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.tickets') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.open_ticket') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.announcements') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.downloads') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.network_status') }} </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-help"
+                    data-collapse-toggle="dropdown-help">
+                    <svg
+                        aria-hidden="true"
+                        class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.976 5.976 0 01-2.516-.552l1.562-1.562a4.006 4.006 0 001.789.027zm-4.677-2.796a4.002 4.002 0 01-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 004 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0110 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 00-2.346.033L7.246 4.668zM12 10a2 2 0 11-4 0 2 2 0 014 0z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap"> {{ __('navigation.help') }} </span>
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="dropdown-help" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.knowledgebase') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.blog') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.tutorials') }} </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <button
+                    type="button"
+                    class="flex items-center p-2 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"
+                    aria-controls="dropdown-docs"
+                    data-collapse-toggle="dropdown-docs">
+                    <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-dark-dim group-hover:text-gray-900 dark:group-hover:text-dark-brown" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M11 4.717c-2.286-.58-4.16-.756-7.045-.71A1.99 1.99 0 0 0 2 6v11c0 1.133.934 2.022 2.044 2.007 2.759-.038 4.5.16 6.956.791V4.717Zm2 15.081c2.456-.631 4.198-.829 6.956-.791A2.013 2.013 0 0 0 22 16.999V6a1.99 1.99 0 0 0-1.955-1.993c-2.885-.046-4.76.13-7.045.71v15.081Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="flex-1 ml-3 text-left whitespace-nowrap"> {{ __('navigation.docs') }} </span>
+                    <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <ul id="dropdown-docs" class="hidden py-2 space-y-2">
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_cpanel') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_whm') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_wordpress') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_php') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_mysql') }} </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center p-2 pl-11 w-full lg:text-base text-sm font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-dark-dim dark:hover:bg-dark-dim dark:hover:text-dark-brown"> {{ __('navigation.docs_letsencrypt') }} </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="absolute bottom-0 left-0 justify-center p-1 lg:py-3 space-x-4 w-full flex bg-white dark:bg-dark-brown z-20">
+        
+        <!-- Add Contacts Shortcut -->
+        <div id="tooltip-add-contacts" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip">
+            {{ __('navigation.tooltip-add-contacts') }}
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+        <a  data-tooltip-target="tooltip-add-contacts" data-dropdown-toggle="add-contacts-dropdown"
+            href="#" class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer hover:text-dark-brown hover:bg-dark-dim dark:text-dark-dim dark:hover:text-dark-brown dark:hover:bg-dark-dim">
+            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4H6Zm7.25-2.095c.478-.86.75-1.85.75-2.905a5.973 5.973 0 0 0-.75-2.906 4 4 0 1 1 0 5.811ZM15.466 20c.34-.588.535-1.271.535-2v-1a5.978 5.978 0 0 0-1.528-4H18a4 4 0 0 1 4 4v1a2 2 0 0 1-2 2h-4.535Z" clip-rule="evenodd" />
+            </svg>
+        </a>
+         <div class="hidden z-50 m-3 lg:text-base text-sm list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-dark-dim dark:text-dark-brown dark:border dark:border-dark-deep" id="add-contacts-dropdown">
+            <ul class="py-1" role="none">
+                <li>
+                    <a href="lang/en" class="block p-2 text-xs hover:bg-gray-100 dark:hover:text-dark-dim dark:hover:bg-dark-brown" role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M9 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4H7Zm8-1a1 1 0 0 1 1-1h1v-1a1 1 0 1 1 2 0v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+                            </svg>
+                            {{ __('navigation.new-contact') }}
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="lang/en" class="block p-2 text-xs hover:bg-gray-100 dark:hover:text-dark-dim dark:hover:bg-dark-brown" role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4H6Zm7.25-2.095c.478-.86.75-1.85.75-2.905a5.973 5.973 0 0 0-.75-2.906 4 4 0 1 1 0 5.811ZM15.466 20c.34-.588.535-1.271.535-2v-1a5.978 5.978 0 0 0-1.528-4H18a4 4 0 0 1 4 4v1a2 2 0 0 1-2 2h-4.535Z" clip-rule="evenodd"/>
+                            </svg>
+                            {{ __('navigation.view-contacts') }}
+                        </div>
+                    </a>
+                </li>
+            </ul>
+         </div>
+
+        <!-- Theme Selector -->
+         <div id="tooltip-theme-selector" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip">
+            {{ __('navigation.tooltip-theme-selector') }}
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+        <button data-tooltip-target="tooltip-theme-selector" title="Alternar Colores" id="toggleTheme" class="inline-flex justify-center p-2 text-dark-dim rounded cursor-pointer hover:text-dark-brown hover:bg-dark-dim dark:text-dark-dim dark:hover:text-dark-brown dark:hover:bg-dark-dim">
+            <svg class="w-5 h-5 mt-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z" />
+            </svg>
+            <svg class="w-5 h-5 mt-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z" clip-rule="evenodd" />
+            </svg>
+        </button>
+
+        <!-- Lang Selector -->
+        <div id="tooltip-lang" role="tooltip"
+            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip">
+            {{ __('navigation.tooltip-lang') }}
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+        <button type="button" data-dropdown-toggle="language-dropdown" data-tooltip-target="tooltip-lang"
+            class="inline-flex justify-center p-2 rounded cursor-pointer hover:text-dark-brown hover:bg-dark-dim dark:text-dark-dim dark:hover:text-dark-brown dark:hover:bg-dark-dim">
+            <svg class="h-6 w-6 rounded-full" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13 19 3.5-9 3.5 9m-6.125-2h5.25M3 7h7m0 0h2m-2 0c0 1.63-.793 3.926-2.239 5.655M7.5 6.818V5m.261 7.655C6.79 13.82 5.521 14.725 4 15m3.761-2.345L5 10m2.761 2.655L10.2 15" />
+            </svg>
+        </button>
+        <!-- Lang Dropdown -->
+        <div class="hidden z-50 my-4 lg:text-base text-sm list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-dark-dim dark:text-dark-brown dark:border dark:border-dark-deep" id="language-dropdown">
+            <ul class="py-1" role="none">
+                <li>
+                    <a href="lang/en" class="block py-1 px-2 text-sm hover:bg-gray-100 dark:hover:text-dark-dim dark:hover:bg-dark-brown" role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#fff"></rect>
+                                <path d="M1.638,5.846H30.362c-.711-1.108-1.947-1.846-3.362-1.846H5c-1.414,0-2.65,.738-3.362,1.846Z" fill="#a62842"></path>
+                                <path d="M2.03,7.692c-.008,.103-.03,.202-.03,.308v1.539H31v-1.539c0-.105-.022-.204-.03-.308H2.03Z" fill="#a62842"></path>
+                                <path fill="#a62842" d="M2 11.385H31V13.231H2z"></path>
+                                <path fill="#a62842" d="M2 15.077H31V16.923000000000002H2z"></path>
+                                <path fill="#a62842" d="M1 18.769H31V20.615H1z"></path>
+                                <path d="M1,24c0,.105,.023,.204,.031,.308H30.969c.008-.103,.031-.202,.031-.308v-1.539H1v1.539Z" fill="#a62842"></path>
+                                <path d="M30.362,26.154H1.638c.711,1.108,1.947,1.846,3.362,1.846H27c1.414,0,2.65-.738,3.362-1.846Z" fill="#a62842"></path>
+                                <path d="M5,4h11v12.923H1V8c0-2.208,1.792-4,4-4Z" fill="#102d5e"></path>
+                                <path d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z" opacity=".15"></path>
+                                <path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z" fill="#fff" opacity=".2"></path>
+                                <path fill="#fff" d="M4.601 7.463L5.193 7.033 4.462 7.033 4.236 6.338 4.01 7.033 3.279 7.033 3.87 7.463 3.644 8.158 4.236 7.729 4.827 8.158 4.601 7.463z"></path>
+                                <path fill="#fff" d="M7.58 7.463L8.172 7.033 7.441 7.033 7.215 6.338 6.989 7.033 6.258 7.033 6.849 7.463 6.623 8.158 7.215 7.729 7.806 8.158 7.58 7.463z"></path>
+                                <path fill="#fff" d="M10.56 7.463L11.151 7.033 10.42 7.033 10.194 6.338 9.968 7.033 9.237 7.033 9.828 7.463 9.603 8.158 10.194 7.729 10.785 8.158 10.56 7.463z"></path>
+                                <path fill="#fff" d="M6.066 9.283L6.658 8.854 5.927 8.854 5.701 8.158 5.475 8.854 4.744 8.854 5.335 9.283 5.109 9.979 5.701 9.549 6.292 9.979 6.066 9.283z"></path>
+                                <path fill="#fff" d="M9.046 9.283L9.637 8.854 8.906 8.854 8.68 8.158 8.454 8.854 7.723 8.854 8.314 9.283 8.089 9.979 8.68 9.549 9.271 9.979 9.046 9.283z"></path>
+                                <path fill="#fff" d="M12.025 9.283L12.616 8.854 11.885 8.854 11.659 8.158 11.433 8.854 10.702 8.854 11.294 9.283 11.068 9.979 11.659 9.549 12.251 9.979 12.025 9.283z"></path>
+                                <path fill="#fff" d="M6.066 12.924L6.658 12.494 5.927 12.494 5.701 11.799 5.475 12.494 4.744 12.494 5.335 12.924 5.109 13.619 5.701 13.19 6.292 13.619 6.066 12.924z"></path>
+                                <path fill="#fff" d="M9.046 12.924L9.637 12.494 8.906 12.494 8.68 11.799 8.454 12.494 7.723 12.494 8.314 12.924 8.089 13.619 8.68 13.19 9.271 13.619 9.046 12.924z"></path>
+                                <path fill="#fff" d="M12.025 12.924L12.616 12.494 11.885 12.494 11.659 11.799 11.433 12.494 10.702 12.494 11.294 12.924 11.068 13.619 11.659 13.19 12.251 13.619 12.025 12.924z"></path>
+                                <path fill="#fff" d="M13.539 7.463L14.13 7.033 13.399 7.033 13.173 6.338 12.947 7.033 12.216 7.033 12.808 7.463 12.582 8.158 13.173 7.729 13.765 8.158 13.539 7.463z"></path>
+                                <path fill="#fff" d="M4.601 11.104L5.193 10.674 4.462 10.674 4.236 9.979 4.01 10.674 3.279 10.674 3.87 11.104 3.644 11.799 4.236 11.369 4.827 11.799 4.601 11.104z"></path>
+                                <path fill="#fff" d="M7.58 11.104L8.172 10.674 7.441 10.674 7.215 9.979 6.989 10.674 6.258 10.674 6.849 11.104 6.623 11.799 7.215 11.369 7.806 11.799 7.58 11.104z"></path>
+                                <path fill="#fff" d="M10.56 11.104L11.151 10.674 10.42 10.674 10.194 9.979 9.968 10.674 9.237 10.674 9.828 11.104 9.603 11.799 10.194 11.369 10.785 11.799 10.56 11.104z"></path>
+                                <path fill="#fff" d="M13.539 11.104L14.13 10.674 13.399 10.674 13.173 9.979 12.947 10.674 12.216 10.674 12.808 11.104 12.582 11.799 13.173 11.369 13.765 11.799 13.539 11.104z"></path>
+                                <path fill="#fff" d="M4.601 14.744L5.193 14.315 4.462 14.315 4.236 13.619 4.01 14.315 3.279 14.315 3.87 14.744 3.644 15.44 4.236 15.01 4.827 15.44 4.601 14.744z"></path>
+                                <path fill="#fff" d="M7.58 14.744L8.172 14.315 7.441 14.315 7.215 13.619 6.989 14.315 6.258 14.315 6.849 14.744 6.623 15.44 7.215 15.01 7.806 15.44 7.58 14.744z"></path>
+                                <path fill="#fff" d="M10.56 14.744L11.151 14.315 10.42 14.315 10.194 13.619 9.968 14.315 9.237 14.315 9.828 14.744 9.603 15.44 10.194 15.01 10.785 15.44 10.56 14.744z"></path>
+                                <path fill="#fff" d="M13.539 14.744L14.13 14.315 13.399 14.315 13.173 13.619 12.947 14.315 12.216 14.315 12.808 14.744 12.582 15.44 13.173 15.01 13.765 15.44 13.539 14.744z"></path>
+                            </svg>
+                            {{ __('navigation.lang-english') }}
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="lang/es" class="block py-1 px-2 text-sm hover:bg-gray-100 dark:hover:text-dark-dim dark:hover:bg-dark-brown" role="menuitem">
+                        <div class="inline-flex items-center">
+                            <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <path d="M1,24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V15H1v9Z" fill="#c73a29"></path>
+                                <path d="M27,4H5c-2.209,0-4,1.791-4,4v8H31V8c0-2.209-1.791-4-4-4Z" fill="#fff"></path>
+                                <path d="M5,4H13v12H1V8c0-2.208,1.792-4,4-4Z" fill="#1435a1"></path>
+                                <path d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z" opacity=".15"></path>
+                                <path fill="#fff" d="M8.146 10.674L10.001 9.326 7.708 9.326 7 7.146 6.292 9.326 3.999 9.326 5.854 10.674 5.145 12.854 7 11.507 8.855 12.854 8.146 10.674z"></path>
+                                <path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z" fill="#fff" opacity=".2"></path>
+                            </svg>
+                            {{ __('navigation.lang-spanish') }}
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
