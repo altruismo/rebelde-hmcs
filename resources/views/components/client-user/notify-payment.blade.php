@@ -53,7 +53,7 @@
                     <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">PDF, SVG, PNG, JPG, GIF (MAX. 800x400px).</p>
                 </div>
             </div>
-            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:text-secondary dark:bg-dark-clear dark:hover:bg-dark-action dark:focus:ring-dark-action">Send Notify</button>
+            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-secondary dark:bg-dark-clear dark:hover:bg-dark-action dark:focus:ring-dark-action">Send Notification</button>
         </form>        
     </div>
 </div>
