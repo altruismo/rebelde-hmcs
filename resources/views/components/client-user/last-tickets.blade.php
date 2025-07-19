@@ -1,4 +1,4 @@
-<div class="rounded-lg shadow pb-1 h-96 mb-4">
+<div class="rounded-lg shadow pb-1 h-96 mb-4 px-4">
     <div class="w-full h-full overflow-y-scroll bg-white rounded-lg dark:bg-dark-deep dark:border-gray-700 scrollbar">
         <h5 class="flex justify-between p-2 px-4 rounded-t-lg text-base font-semibold text-gray-900 md:text-xl dark:text-white bg-clear dark:bg-dark-brown">
             Last Tickets

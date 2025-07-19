@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-dim md:translate-x-0 dark:bg-dark-brown dark:border-dark-deep" aria-label="Sidenav" id="drawer-navigation">
+<aside class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-dim md:translate-x-0 dark:bg-dark-brown dark:border-dark-brown" aria-label="Sidenav" id="drawer-navigation">
     <div class="overflow-y-auto py-5 pb-14 px-3 h-full bg-white dark:bg-dark-brown scrollbar">
 
         <div class="max-w-sm p-6 mb-4 bg-milk rounded-lg shadow-sm dark:bg-dark-brown dark:shadow-dark-deep">

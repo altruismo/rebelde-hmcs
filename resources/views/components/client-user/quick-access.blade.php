@@ -1,4 +1,4 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 text-dim dark:text-dark-dim">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 px-4 text-dim dark:text-dark-dim">
     <!-- Servicios -->
     <div class="p-6 2xl:p-8 pb-1 rounded-lg shadow grid grid-flow-col grid-rows-2 grid-cols-2 !bg-gradient-to-t !from-white !to-clear/50 dark:!from-dark-deep dark:!via-dark-brown/15 dark:!to-dark-deep">
         <div class="text-center text-3xl lg:text-2xl xl:text-4xl 2xl:text-6xl font-bold z-30 pt-8">Services</div>
