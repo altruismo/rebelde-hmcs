@@ -2,55 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  /* .card {
-    @apply bg-heaven text-dim dark:bg-dark-clear dark:text-gray-200 p-4 rounded shadow shadow-secondary;
-  }  
-  .card-aside {
-    @apply text-heaven dark:bg-dark-clear dark:text-gray-200 p-4 pl-1;
+@layer base {
+  body {    
+    @apply font-sans antialiased bg-gray-50 dark:bg-dark-deep scrollbar;
   }
-  .card-aside > .title {
-    @apply flex items-center border-b border-shade font-bold text-2xl mb-1 text-clear;
-  }
-  .card-aside a {
-     @apply font-medium text-deep dark:text-blue-500 hover:underline hover:text-clear contents;
-  }
-  .card-aside ul {
-    @apply max-w-md space-y-1 list-inside text-heaven;
-  }
-  .card-aside li {
-    @apply flex items-center py-1;
-  }
-  .card-aside svg {
-    @apply w-5 h-5 mr-1 dark:text-white;
-  }
-  .card-aside > .title > svg {
-    @apply w-6 h-6;
-  }
+}
 
-  
-  .card a {
-    @apply text-deep dark:text-dark-heaven flex items-center;
-  }
-  .card h2 > a {
-    @apply text-secondary;
-  }
-  .card h2 > a > svg {
-    @apply w-7 h-7;
-  }
-  .card > a > svg {
-    @apply w-5 h-5;
-  }
-  .deck-2 .card h2 > a {
-    @apply text-deep;
-  }
-  input[type='radio'] {
-    @apply w-4 h-4 text-dim bg-milk focus:ring-primo dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-1 dark:bg-gray-700 dark:border-gray-600;
-  }
-  input[type='radio'] + label {
-    @apply ms-2 text-sm font-medium text-deep dark:text-gray-300;
-  } */
-  
+@layer components {
+
+    nav.ca-navigation-bar {
+      @apply bg-heaven border-b border-dim text-secondary px-4 py-2 fixed left-0 right-0 top-0 z-50 dark:bg-dark-brown dark:border-dark-brown dark:text-dark-dim;
+    }
+
+    nav.ca-navigation-bar button.toggle-aside {
+      @apply p-2 mr-2 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-dark-dim dark:hover:bg-gray-700 dark:hover:text-white;
+    }
+
+    nav.ca-navigation-bar a.ca-main-logo {
+      @apply flex items-center justify-between mr-4;
+    }
+
+    nav.ca-navigation-bar a.ca-main-logo img {
+      @apply mr-3 h-8 mix-blend-luminosity;
+    }
+
+    nav.ca-navigation-bar a.ca-main-logo span {
+      @apply self-center text-2xl font-semibold whitespace-nowrap dark:text-dark-dim;
+    }
+
+    nav.ca-navigation-bar button#user-menu-button {
+      @apply flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600;
+    }
+
+     nav.ca-navigation-bar button#user-menu-button img {
+      @apply w-8 h-8 rounded-full;
+     }
+    
 }
 
 @layer utilities {

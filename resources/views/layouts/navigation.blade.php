@@ -1,13 +1,8 @@
-<nav class="bg-heaven border-b border-dim text-secondary px-4 py-2 fixed left-0 right-0 top-0 z-50 dark:bg-dark-brown dark:border-dark-brown dark:text-dark-dim">
-
+<nav class="ca-navigation-bar">
     <div class="flex flex-wrap justify-between items-center">
         <div class="flex justify-start items-center">
             <!-- Toggle Aside Navigation -->
-            <button
-                data-drawer-target="drawer-navigation"
-                data-drawer-toggle="drawer-navigation"
-                aria-controls="drawer-navigation"
-                class="p-2 mr-2 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-dark-dim dark:hover:bg-gray-700 dark:hover:text-white">
+            <button class="toggle-aside" aria-controls="drawer-navigation" data-drawer-target="drawer-navigation" data-drawer-toggle="drawer-navigation">
                 <svg
                     aria-hidden="true"
                     class="w-6 h-6"
@@ -32,31 +27,23 @@
                 </svg>
                 <span class="sr-only">Toggle sidebar</span>
             </button>
-            <a href="https://flowbite.com" class="flex items-center justify-between mr-4">
-                <img
-                    src="focused_hosting_main_logo_white_transparent_100x109.svg"
-                    class="mr-3 h-8 mix-blend-luminosity"
-                    alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark-dim">Rebelde HMCS</span>
+            <a href="https://flowbite.com" class="ca-main-logo">
+                <img src="focused_hosting_main_logo_white_transparent_100x109.svg" alt="Flowbite Logo" />
+                <span>Rebelde HMCS</span>
             </a>
-
         </div>
-        
         <div class="flex items-center lg:order-2">
             <!-- Notifications -->
             <x-client-user.notifications-dropdown />
             <!-- Apps -->
             <!-- <xclient-user.apps-dropdown /> -->
-            
             <button
                 type="button"
-                class="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                 id="user-menu-button"
                 aria-expanded="false"
                 data-dropdown-toggle="dropdown">
                 <span class="sr-only">Open user menu</span>
                 <img
-                    class="w-8 h-8 rounded-full"
                     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png"
                     alt="user photo" />
             </button>

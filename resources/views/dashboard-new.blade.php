@@ -1,5 +1,5 @@
 <x-app-layout>
-  <div class="antialiased bg-gray-50 dark:bg-dark-deep">
+  <div class="antialiased">
     
     {{-- Encabezado --}}
     @include('layouts.navigation')
