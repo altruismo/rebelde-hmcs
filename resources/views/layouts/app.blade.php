@@ -27,7 +27,7 @@
     const html = document.documentElement
     const btn = document.getElementById('toggleTheme')
 
-    // Guardar preferencia
+    // Guardar tema preferido
     const savedTheme = localStorage.getItem('theme')
     if (savedTheme === 'dark') html.classList.add('dark')
     if (savedTheme === 'light') html.classList.remove('dark')
