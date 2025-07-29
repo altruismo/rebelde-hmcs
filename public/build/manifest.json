@@ -4,7 +4,7 @@
     "name": "module.esm"
   },
   "resources/themes/classic/admin-area/css/app.css": {
-    "file": "assets/app-pK3z8NYF.css",
+    "file": "assets/app-BRQK2xMz.css",
     "src": "resources/themes/classic/admin-area/css/app.css",
     "isEntry": true
   },
@@ -18,7 +18,7 @@
     ]
   },
   "resources/themes/classic/guest-area/css/app.css": {
-    "file": "assets/app-CPkLDE-Z.css",
+    "file": "assets/app-DtUpk71u.css",
     "src": "resources/themes/classic/guest-area/css/app.css",
     "isEntry": true
   },

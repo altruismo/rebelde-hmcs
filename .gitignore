@@ -3,6 +3,7 @@
 
 # ⚙️ Laravel
 /vendor/
+toggle-env.sh
 .env
 .env.*
 .env.*.backup
@@ -36,6 +37,7 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/public/build/*
 /public/hot
 /public/storage
 /public/mix-manifest.json
