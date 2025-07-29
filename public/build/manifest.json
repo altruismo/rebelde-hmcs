@@ -1,13 +1,34 @@
 {
-  "resources/css/app.css": {
-    "file": "assets/app-v9uuDEjf.css",
-    "src": "resources/css/app.css",
+  "_module.esm-BKe4hSDj.js": {
+    "file": "assets/module.esm-BKe4hSDj.js",
+    "name": "module.esm"
+  },
+  "resources/themes/classic/admin-area/css/app.css": {
+    "file": "assets/app-pK3z8NYF.css",
+    "src": "resources/themes/classic/admin-area/css/app.css",
     "isEntry": true
   },
-  "resources/js/app.js": {
-    "file": "assets/app-Bf4POITK.js",
+  "resources/themes/classic/admin-area/js/app.js": {
+    "file": "assets/app-BBCQS6KE.js",
     "name": "app",
-    "src": "resources/js/app.js",
+    "src": "resources/themes/classic/admin-area/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_module.esm-BKe4hSDj.js"
+    ]
+  },
+  "resources/themes/classic/guest-area/css/app.css": {
+    "file": "assets/app-CPkLDE-Z.css",
+    "src": "resources/themes/classic/guest-area/css/app.css",
     "isEntry": true
+  },
+  "resources/themes/classic/guest-area/js/app.js": {
+    "file": "assets/app-qdAaE31z.js",
+    "name": "app",
+    "src": "resources/themes/classic/guest-area/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_module.esm-BKe4hSDj.js"
+    ]
   }
 }
