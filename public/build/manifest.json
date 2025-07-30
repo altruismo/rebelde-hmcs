@@ -4,12 +4,12 @@
     "name": "module.esm"
   },
   "resources/themes/classic/admin-area/css/app.css": {
-    "file": "assets/app-BRQK2xMz.css",
+    "file": "assets/classic/common-RSYH_-BZ.css",
     "src": "resources/themes/classic/admin-area/css/app.css",
     "isEntry": true
   },
   "resources/themes/classic/admin-area/js/app.js": {
-    "file": "assets/app-BBCQS6KE.js",
+    "file": "assets/classic/admin-area-Di0blP8E.js",
     "name": "app",
     "src": "resources/themes/classic/admin-area/js/app.js",
     "isEntry": true,
@@ -18,12 +18,12 @@
     ]
   },
   "resources/themes/classic/guest-area/css/app.css": {
-    "file": "assets/app-DtUpk71u.css",
+    "file": "assets/classic/common-BvEC-qNE.css",
     "src": "resources/themes/classic/guest-area/css/app.css",
     "isEntry": true
   },
   "resources/themes/classic/guest-area/js/app.js": {
-    "file": "assets/app-qdAaE31z.js",
+    "file": "assets/classic/guest-area-Di0blP8E.js",
     "name": "app",
     "src": "resources/themes/classic/guest-area/js/app.js",
     "isEntry": true,
