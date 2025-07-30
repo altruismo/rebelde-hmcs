@@ -65,6 +65,12 @@ else
     echo "✅ Archivo public/hot eliminado."
   fi
 
+  echo "🧹 Limpiando public/build..."
+  if [[ -d public/build ]]; then
+    rm -rf public/build
+    echo "✅ Directorio public/build limpio."
+  fi
+
   echo "🧼 Limpiando cachés de Laravel..."
   php artisan config:clear
   php artisan cache:clear
@@ -74,5 +80,6 @@ else
   echo "⚙️ Compilando assets de producción..."
   npm run build
 fi
-
+source $ENV_FILE
+echo "🎨 El tema activo es: $THEME_CURRENT"
 echo "🎉 Cambio completado: ahora estás en modo $MODE"

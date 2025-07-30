@@ -15,7 +15,6 @@ function getEnvValue(key, defaultValue) {
 }
 
 const theme = getEnvValue('THEME_CURRENT');
-console.log('Current Theme: ' + theme);
 
 const cssInputs = [
   `resources/themes/${theme}/admin-area/css/app.css`,
