@@ -11,7 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
         <!-- Styles / Scripts -->
-        @vite(['resources/themes/'.current_theme().'/guest-area/css/app.css', 'resources/themes/'.current_theme().'/guest-area/js/app.js'])
+        @vite(['resources/themes/'.current_theme().'/css/guest-area/app.css', 'resources/themes/'.current_theme().'/js/guest-area/app.js'])
         
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">

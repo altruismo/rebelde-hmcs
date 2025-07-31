@@ -3,7 +3,7 @@
     <div class="min-h-screen flex">
 
         {{-- Sidebar --}}
-        <x-aside-client />
+        <x-aside-client /> 
 
         {{-- Área principal --}}
         <div class="flex-1 flex flex-col">

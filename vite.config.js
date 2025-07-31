@@ -17,13 +17,13 @@ function getEnvValue(key, defaultValue) {
 const theme = getEnvValue('THEME_CURRENT');
 
 const cssInputs = [
-  `resources/themes/${theme}/admin-area/css/app.css`,
-  `resources/themes/${theme}/guest-area/css/app.css`,
+  `resources/themes/${theme}/css/client-area/app.css`,
+  `resources/themes/${theme}/css/guest-area/app.css`,
 ];
 
 const jsInputs = [
-  `resources/themes/${theme}/admin-area/js/app.js`,
-  `resources/themes/${theme}/guest-area/js/app.js`,
+  `resources/themes/${theme}/js/client-area/app.js`,
+  `resources/themes/${theme}/js/guest-area/app.js`,
 ];
 
 // Función para extraer el área: admin-area, guest-area, etc.

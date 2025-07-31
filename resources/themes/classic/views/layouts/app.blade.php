@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <!-- Scripts -->    
-    @vite(['resources/themes/'.current_theme().'/admin-area/css/app.css', 'resources/themes/'.current_theme().'/admin-area/js/app.js'])  
+    @vite(['resources/themes/'.current_theme().'/css/client-area/app.css', 'resources/themes/'.current_theme().'/js/client-area/app.js'])  
 
 </head>
 
