@@ -5,7 +5,7 @@ use App\Http\Controllers\ClientDashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('theme::welcome');
 });
 
 Route::get('/dashboard', [ClientDashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');

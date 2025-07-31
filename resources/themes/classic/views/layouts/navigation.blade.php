@@ -34,7 +34,7 @@
         </div>
         <div class="flex items-center lg:order-2">
             <!-- Notifications -->
-            <x-client-user.notifications-dropdown />
+            <x-theme::client-user.notifications-dropdown />
             <!-- Apps -->
             <!-- <xclient-user.apps-dropdown /> -->
             <button

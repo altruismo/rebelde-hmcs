@@ -9,12 +9,12 @@
         </p>
     </header>
 
-    <x-danger-button
+    <x-theme::danger-button
         x-data=""
         x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
-    >{{ __('profile.delete_account') }}</x-danger-button>
+    >{{ __('profile.delete_account') }}</x-theme::danger-button>
 
-    <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
+    <x-theme::modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
         <form method="post" action="{{ route('profile.destroy') }}" class="p-6">
             @csrf
             @method('delete')
@@ -28,9 +28,9 @@
             </p>
 
             <div class="mt-6">
-                <x-input-label for="password" value="{{ __('profile.placeholder_password') }}" class="sr-only" />
+                <x-theme::input-label for="password" value="{{ __('profile.placeholder_password') }}" class="sr-only" />
 
-                <x-text-input
+                <x-theme::text-input
                     id="password"
                     name="password"
                     type="password"
@@ -38,18 +38,18 @@
                     placeholder="{{ __('profile.placeholder_password') }}"
                 />
 
-                <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
+                <x-theme::input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
             </div>
 
             <div class="mt-6 flex justify-end">
-                <x-secondary-button x-on:click="$dispatch('close')">
+                <x-theme::secondary-button x-on:click="$dispatch('close')">
                     {{ __('profile.cancel') }}
-                </x-secondary-button>
+                </x-theme::secondary-button>
 
-                <x-danger-button class="ms-3">
+                <x-theme::danger-button class="ms-3">
                     {{ __('profile.delete_account') }}
-                </x-danger-button>
+                </x-theme::danger-button>
             </div>
         </form>
-    </x-modal>
+    </x-theme::modal>
 </section>

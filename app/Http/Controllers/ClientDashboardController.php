@@ -7,12 +7,14 @@ use Illuminate\Http\Request;
 class ClientDashboardController extends Controller
 {
     public function index()
-    {
-        return view('dashboard-new');
+    {   
+        //Esto no es opcional en este contexto, porque Laravel necesita saber que la vista está en un namespace registrado y no en resources/views.
+        return view('theme::dashboard-new');
     }
 
     public function exindex()
     {
-        return view('dashboard');
+        //Esta vista está obsoleta
+        return view('theme::dashboard');
     }
 }

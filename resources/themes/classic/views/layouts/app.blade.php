@@ -67,7 +67,7 @@
 
         // Inicialización
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('http://clientes.focused.cl.local/build/list-services.json')
+            fetch('http://clientes.focused.cl.local/list-services.json')
                 .then(response => {
                     if (!response.ok) throw new Error('Error al cargar los datos');
                     return response.json();
