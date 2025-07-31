@@ -10,6 +10,6 @@ if (!function_exists('current_theme')) {
         
         // Obtener del .env con valor por defecto
         //return env('THEME_CURRENT', 'classic');
-        return env('THEME_CURRENT');
+        return config('view.theme');
     }
 }

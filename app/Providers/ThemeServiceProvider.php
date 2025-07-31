@@ -21,7 +21,7 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $theme = config('view.theme', 'classic');
+        $theme = config('view.theme');
 
         $themePath = resource_path("themes/{$theme}/views");
 
