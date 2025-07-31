@@ -71,11 +71,11 @@ else
     echo "✅ Directorio public/build limpio."
   fi
 
-  echo "🧼 Limpiando cachés de Laravel..."
-  php artisan config:clear
-  php artisan cache:clear
-  php artisan route:cache
-  php artisan view:cache
+  #echo "🧼 Limpiando cachés de Laravel..."
+  #php artisan config:clear
+  #php artisan cache:clear
+  #php artisan route:cache
+  #php artisan view:cache
 
   echo "⚙️ Compilando assets de producción..."
   npm run build
