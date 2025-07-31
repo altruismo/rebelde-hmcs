@@ -11,7 +11,7 @@ class SyncTheme extends Command
      *
      * @var string
      */
-    protected $signature = 'app:sync-theme';
+    protected $signature = 'rebelde:vite-sync-theme';
     protected $description = 'Export current theme from config/view.php to bootstrap/cache/theme.json';
     
     /**
