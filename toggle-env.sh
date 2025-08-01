@@ -5,16 +5,21 @@ MODE=$1
 VITE_PORT=5173
 BASE_URL="clientes.focused.cl.local"
 
+source $ENV_FILE
+
+if [[ "$APP_ENV" == "local" ]]; then
+    echo "modo actual: dev"
+    else 
+    echo "modo actual: prod"
+  fi  
+
 #echo "🧼 Limpiando cachés de Laravel..."
   #php artisan config:clear
   #php artisan cache:clear
   #php artisan route:cache
   #php artisan view:cache
 
-echo "🧼 Ejecutando config:cache, y exportando tema activo a cache/theme.json..."
-  php artisan rebelde:cache-config
-
-if [[ "$MODE" != "dev" && "$MODE" != "prod" ]]; then
+if [[ "$MODE" != "dev" && "$MODE" != "prod" ]]; then  
   echo "Uso: ./toggle-env.sh [dev|prod]"
   exit 1
 fi
@@ -53,6 +58,9 @@ if [[ "$MODE" == "dev" ]]; then
 
 else
   echo "🔄 Cambiando a modo PRODUCCIÓN..."
+  
+  echo "🧼 Ejecutando config:cache, y exportando tema activo a cache/theme.json..."
+  php artisan rebelde:cache-config
 
   sed -i \
   -e "s/^APP_ENV=.*/APP_ENV=production/" \
@@ -80,5 +88,5 @@ else
   echo "⚙️ Compilando assets de producción..."
   npm run build
 fi
-source $ENV_FILE
+#source $ENV_FILE
 echo "🎉 Cambio completado: ahora estás en modo $MODE"
