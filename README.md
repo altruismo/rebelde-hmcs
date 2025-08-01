@@ -1,6 +1,6 @@
 # Rebelde HMCS
 
-**Rebelde HMCS** is designed for hosting providers seeking an open-source alternative to legacy billing platforms like WHMCS.
+**Rebelde HMCS** (HostMaster Customer Service), is designed for hosting providers seeking an open-source alternative to legacy billing platforms like WHMCS.
 
 It is a minimal yet powerful tool to manage clients, billing, and notifications in the hosting business. Built with **Laravel**, with a clean and open architecture from day one.
 
@@ -74,6 +74,40 @@ This section is fully editable and can be integrated with dynamic components of 
 
 ---
 
+## 🧰 Artisan Commands
+Rebelde HMCS includes internal Artisan commands to simplify configuration management and frontend integration.
+
+**rebelde:cache-config**
+ This command combines `config:cache` with a custom sync process that exports the active theme configuration into a JSON file. It’s useful during deployment or when switching between environments.
+
+>`php artisan rebelde:cache-config`
+
+What it does:
+- Clears and rebuilds Laravel's configuration cache. 
+- Writes the current view.theme value from config/view.php into cache/theme.json.
+
+This ensures your frontend build tools (like Vite or Webpack) have access to the correct theme name during asset compilation.
+
+**rebelde:vite-sync-theme**
+Exports the current active theme name from Laravel’s configuration to a JSON file consumable by Vite or other frontend tools.
+
+> `php artisan rebelde:vite-sync-theme`
+
+What it does:
+- Reads the view.theme value from config/view.php.
+- Creates or updates a file at cache/theme.json with the theme name.
+
+Example output (cache/theme.json):
+
+```
+{
+  "theme": "default"
+}
+```
+Use this command independently or as part of a custom deployment/build pipeline.
+
+---
+
 ## 📦 Installation (coming soon)
 
 Installation instructions will be available after the first stable commit.
@@ -92,7 +126,7 @@ Installation instructions will be available after the first stable commit.
 
 > **Rebelde HMCS** is not just software.  
 > It's a mindset.  
-> It's the belief that we can build better.
+> It's the belief that collaboration is building better.
 
 ---
 
