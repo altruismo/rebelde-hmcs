@@ -3,19 +3,20 @@ import laravel from 'laravel-vite-plugin';
 import path from 'path';
 import { readFileSync } from 'fs';
 
-// Función para leer valores del .env
-function getEnvValue(key, defaultValue) {
+// Leer el nombre del tema activo desde bootstrap/cache/theme.json
+function getCurrentTheme(defaultTheme = 'default') {
   try {
-    const env = readFileSync('.env', 'utf8');
-    const match = env.match(new RegExp(`${key}=([^\n\r]+)`));
-    return match ? match[1] : defaultValue;
+    const json = readFileSync('bootstrap/cache/theme.json', 'utf8');
+    const data = JSON.parse(json);
+    console.log("Tema data: ", data);
+    return typeof data.theme === 'string' ? data.theme : defaultTheme;    
   } catch {
-    return defaultValue;
+    return defaultTheme;
   }
 }
 
-const theme = getEnvValue('THEME_CURRENT');
-
+const theme = getCurrentTheme();
+console.log("Tema cargado: "+theme);
 const cssInputs = [
   `resources/themes/${theme}/css/client-area/app.css`,
   `resources/themes/${theme}/css/guest-area/app.css`,
@@ -33,11 +34,6 @@ function extractArea(filePath) {
   const area = AREAS.find(a => filePath.includes(`/${a}/`));
   return area || 'common';
 }
-
-/* function extractArea(filePath) {
-  const match = filePath.match(/\/(admin-area|client-area|guest-area)\//);
-  return match ? match[1] : 'common';
-} */
 
 export default defineConfig({
   plugins: [
